@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>이서의 사랑싹 텃밭 40번 · 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --g-dark:#1a3d0a;--g:#2d5a18;--g-mid:#4a8020;--g-light:#7ab840;--g-pale:#eaf3de;
+  --amber:#ba7517;--amber-l:#faeeda;
+  --stone:#f5f2ec;--stone-mid:#e8e3d8;--stone-dk:#b8b0a0;
+  --text:#1a1a18;--text-m:#5a5650;--text-l:#9a9590;
+  --white:#fff;
+  --r:10px;--r-sm:6px;--r-lg:16px;
+  --sh:0 2px 12px rgba(0,0,0,.08);--sh-lg:0 8px 32px rgba(0,0,0,.12);
+  --serif:'Noto Serif KR',serif;--sans:'Noto Sans KR',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--stone);font-family:var(--sans);color:var(--text);min-height:100vh}
+
+/* HEADER */
+.hd{background:var(--g-dark);color:#fff;padding:0 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.3)}
+.hd-in{max-width:920px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-family:var(--serif);font-size:17px;font-weight:700;display:flex;align-items:center;gap:8px}
+.logo-b{background:var(--g-mid);color:#fff;font-size:10px;padding:2px 8px;border-radius:20px;font-family:var(--sans);font-weight:500}
+.nav{display:flex;gap:2px}
+.nb{padding:7px 16px;font-size:13px;font-family:var(--sans);border:none;border-radius:6px;cursor:pointer;background:transparent;color:rgba(255,255,255,.7);transition:.15s}
+.nb:hover{background:rgba(255,255,255,.12);color:#fff}
+.nb.on{background:var(--g-mid);color:#fff;font-weight:500}
+
+/* MAIN */
+.main{max-width:920px;margin:0 auto;padding:24px 16px}
+.pg{display:none}
+.pg.show{display:block}
+.ph{margin-bottom:20px}
+.pt{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--g-dark);margin-bottom:4px}
+.ps{font-size:13px;color:var(--text-l)}
+
+/* ── 도면 ── */
+.mc{display:flex;gap:7px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.mt{padding:5px 14px;font-size:12px;border:.5px solid var(--stone-dk);border-radius:20px;cursor:pointer;background:var(--white);color:var(--text-m);font-family:var(--sans);transition:.15s}
+.mt.on{background:var(--g);color:#fff;border-color:var(--g)}
+.lb{padding:4px 11px;font-size:12px;border:.5px solid var(--stone-dk);border-radius:6px;cursor:pointer;background:var(--white);color:var(--text-m);font-family:var(--sans);transition:.15s}
+.lb.on{background:var(--g-pale);color:var(--g);border-color:var(--g-mid)}
+.cw{border:.5px solid var(--stone-dk);border-radius:var(--r-lg);overflow:hidden;background:var(--stone);margin-bottom:12px;box-shadow:var(--sh)}
+.cw canvas{display:block;width:100%;height:auto}
+.mig{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:12px}
+.mc2{background:var(--white);border-radius:var(--r);padding:10px 12px;border:.5px solid var(--stone-mid)}
+.mcl{font-size:11px;color:var(--text-l);margin-bottom:3px}
+.mcv{font-size:14px;font-weight:600}
+.md{background:var(--white);border:.5px solid var(--stone-mid);border-radius:var(--r);padding:12px;font-size:12px;color:var(--text-m);min-height:60px}
+.mdt{font-size:13px;font-weight:600;color:var(--text);margin-bottom:7px}
+.mdr{display:flex;justify-content:space-between;padding:3px 0;border-bottom:.5px solid var(--stone)}
+.mdr:last-child{border-bottom:none}
+.mtp{margin-top:8px;padding:7px 10px;background:var(--amber-l);border-left:3px solid var(--amber);border-radius:0 6px 6px 0;font-size:12px;color:#7a5800}
+.leg{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:11px;color:var(--text-m)}
+.li{display:flex;align-items:center;gap:4px}
+.ld{width:11px;height:11px;border-radius:3px;flex-shrink:0}
+
+/* ── 계획표 ── */
+.sg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}
+.sc{background:var(--white);border-radius:var(--r);padding:14px;text-align:center;border:.5px solid var(--stone-mid);box-shadow:var(--sh)}
+.sn{font-family:var(--serif);font-size:28px;font-weight:700}
+.sl{font-size:11px;color:var(--text-l);margin-top:2px}
+.pw{margin-bottom:16px}
+.pl{display:flex;justify-content:space-between;font-size:12px;color:var(--text-l);margin-bottom:6px}
+.pb{height:6px;background:var(--stone-mid);border-radius:3px;overflow:hidden}
+.pf{height:100%;border-radius:3px;background:var(--g-mid);transition:width .4s}
+.mf{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap}
+.mfb{padding:5px 14px;font-size:12px;border:.5px solid var(--stone-dk);border-radius:20px;cursor:pointer;background:var(--white);color:var(--text-m);font-family:var(--sans);transition:.15s}
+.mfb.on{color:#fff;border-color:transparent;font-weight:500}
+.ts{margin-bottom:20px}
+.tst{font-size:11px;font-weight:600;color:var(--text-l);letter-spacing:.8px;text-transform:uppercase;margin-bottom:8px;padding-bottom:5px;border-bottom:.5px solid var(--stone-mid)}
+.tl{display:flex;flex-direction:column;gap:5px}
+.ti{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border-radius:var(--r);background:var(--white);border:.5px solid var(--stone-mid);cursor:pointer;transition:.15s}
+.ti:hover{border-color:var(--stone-dk);box-shadow:var(--sh)}
+.ti.done{background:var(--stone);opacity:.55}
+.td{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:4px}
+.tb2{flex:1}
+.tdate{font-size:11px;color:var(--text-l);margin-bottom:2px}
+.tname{font-size:13px;font-weight:500}
+.tname.done{text-decoration:line-through;color:var(--text-l)}
+.tdesc{font-size:12px;color:var(--text-m);margin-top:3px;line-height:1.5}
+.tbg{display:inline-block;padding:1px 7px;border-radius:10px;font-size:10px;font-weight:600;margin-left:6px;vertical-align:middle}
+.tb-u{background:#ffeaea;color:#c0392b}
+.tb-n{background:var(--g-pale);color:var(--g)}
+.tb-h{background:#fff3cd;color:#856404}
+.tb-p{background:#e8eaf6;color:#3949ab}
+
+/* ── 일지 ── */
+.jnav{display:flex;border:.5px solid var(--stone-mid);border-radius:var(--r);overflow:hidden;margin-bottom:16px;box-shadow:var(--sh)}
+.jnb{flex:1;padding:9px 0;font-size:13px;text-align:center;cursor:pointer;background:var(--white);color:var(--text-m);border:none;border-right:.5px solid var(--stone-mid);font-family:var(--sans);transition:.15s}
+.jnb:last-child{border-right:none}
+.jnb.on{background:var(--g-dark);color:#fff;font-weight:500}
+.jp{display:none}
+.jp.show{display:block}
+.jlb{font-size:12px;font-weight:500;color:var(--text-m);margin-bottom:5px;display:block}
+.jsec{margin-bottom:14px}
+.jrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.jb{padding:6px 12px;font-size:12px;border:.5px solid var(--stone-mid);border-radius:20px;cursor:pointer;background:var(--white);color:var(--text-m);font-family:var(--sans);transition:.15s}
+.jb.on{background:var(--g-pale);border-color:var(--g-mid);color:var(--g);font-weight:500}
+.jb.wx.on{background:#e3f2fd;border-color:#1976d2;color:#1565c0}
+.jb.wt.on{background:#e3f2fd;border-color:#1976d2;color:#1565c0}
+.jb.act.on{background:#fff3e0;border-color:#ef6c00;color:#e65100}
+.jin{width:100%;padding:8px 10px;font-size:13px;border:.5px solid var(--stone-mid);border-radius:6px;background:var(--white);color:var(--text);font-family:var(--sans)}
+.jin:focus{outline:none;border-color:var(--g-mid)}
+.jta{width:100%;padding:8px 10px;font-size:12px;border:.5px solid var(--stone-mid);border-radius:6px;background:var(--white);color:var(--text);font-family:var(--sans);resize:none;line-height:1.6}
+.jta:focus{outline:none;border-color:var(--g-mid)}
+.jsel{width:100%;padding:8px 10px;font-size:12px;border:.5px solid var(--stone-mid);border-radius:6px;background:var(--white);color:var(--text);font-family:var(--sans)}
+.ctabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
+.ct{padding:5px 11px;font-size:12px;border:.5px solid var(--stone-mid);border-radius:16px;cursor:pointer;background:var(--white);color:var(--text-m);font-family:var(--sans);transition:.15s}
+.ct.on{color:#fff;font-weight:500}
+.cp{display:none}
+.cp.show{display:block}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.jsb{width:100%;padding:13px;font-size:14px;font-weight:600;background:var(--g-dark);color:#fff;border:none;border-radius:var(--r);cursor:pointer;font-family:var(--serif);letter-spacing:.3px;transition:.15s}
+.jsb:hover{background:var(--g)}
+.lf{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.lfb{padding:4px 12px;font-size:12px;border:.5px solid var(--stone-mid);border-radius:16px;cursor:pointer;background:var(--white);color:var(--text-m);font-family:var(--sans)}
+.lfb.on{background:var(--g-dark);color:#fff;border-color:var(--g-dark)}
+.ll{display:flex;flex-direction:column;gap:8px}
+.lc{background:var(--white);border:.5px solid var(--stone-mid);border-radius:var(--r);padding:13px;cursor:pointer;transition:.15s}
+.lc:hover{border-color:var(--stone-dk);box-shadow:var(--sh)}
+.lt{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.ldt{font-size:13px;font-weight:600;font-family:var(--serif)}
+.lbs2{display:flex;gap:4px;flex-wrap:wrap}
+.lbg{padding:2px 7px;border-radius:10px;font-size:10px;font-weight:600}
+.lsm{font-size:12px;color:var(--text-m);line-height:1.5}
+.lcr{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.cch{padding:2px 8px;border-radius:10px;font-size:10px;font-weight:500}
+.emp{text-align:center;padding:48px 20px;color:var(--stone-dk);font-size:13px}
+.ei{font-size:36px;margin-bottom:10px}
+.grg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.grc{background:var(--white);border:.5px solid var(--stone-mid);border-radius:var(--r);padding:13px;box-shadow:var(--sh)}
+.gct{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.gcn{font-size:13px;font-weight:600}
+.gcs{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:500}
+.gcb{height:5px;background:var(--stone);border-radius:3px;margin-bottom:8px;overflow:hidden}
+.gcf{height:100%;border-radius:3px;transition:width .5s}
+.gcst{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.gcsl{font-size:10px;color:var(--text-l)}
+.gcsv{font-size:12px;font-weight:600;color:var(--text)}
+.phdrop{border:1.5px dashed var(--stone-dk);border-radius:var(--r);padding:20px;text-align:center;color:var(--stone-dk);font-size:12px;cursor:pointer;background:var(--stone);margin-bottom:6px}
+.phdrop:hover{border-color:var(--g-mid);color:var(--g)}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--g-dark);color:#fff;padding:11px 22px;border-radius:24px;font-size:13px;font-family:var(--sans);opacity:0;transition:opacity .25s;pointer-events:none;z-index:9999;box-shadow:var(--sh-lg)}
+.toast.show{opacity:1}
+
+/* MODAL */
+.mo{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:500;align-items:center;justify-content:center;padding:20px}
+.mo.show{display:flex}
+.mox{background:var(--white);border-radius:var(--r-lg);padding:20px;max-width:500px;width:100%;max-height:80vh;overflow-y:auto;box-shadow:var(--sh-lg)}
+.mot{font-family:var(--serif);font-size:16px;font-weight:700;margin-bottom:12px;color:var(--g-dark)}
+.mor{display:flex;justify-content:space-between;padding:4px 0;border-bottom:.5px solid var(--stone);font-size:13px}
+.mor:last-child{border-bottom:none}
+.mork{color:var(--text-l)}
+.morv{font-weight:500;color:var(--text)}
+.moc{width:100%;margin-top:14px;padding:10px;background:var(--g-dark);color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px;font-family:var(--sans)}
+
+@media(max-width:480px){
+  .mig{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grg{grid-template-columns:1fr}
+  .nb{padding:7px 10px;font-size:12px}
+}
+
+
+.hd{background:linear-gradient(135deg,#6b3a1f 0%,#8B5A2B 50%,#7a4810 100%) !important;border-bottom:3px solid #c8860a !important;}
+.nb.on{background:rgba(255,255,255,.25) !important;border:1px solid rgba(255,255,255,.35) !important;}
+.logo-b{background:rgba(255,255,255,.2) !important;border:1px solid rgba(255,255,255,.3) !important;}
+.add-row{display:flex;gap:6px;margin-top:6px;align-items:center;flex-wrap:wrap}
+.add-row .jin{flex:1;min-width:100px}
+.add-ok-btn{padding:6px 14px;font-size:12px;background:var(--g);color:#fff;border:none;border-radius:6px;cursor:pointer}
+.add-cancel-btn{padding:6px 12px;font-size:12px;background:var(--stone-dk);color:#fff;border:none;border-radius:6px;cursor:pointer}
+.add-new-btn{padding:5px 11px;font-size:12px;border:1.5px dashed var(--stone-dk);background:transparent;color:var(--text-l);border-radius:20px;cursor:pointer}
+.add-new-btn:hover{border-color:var(--g-mid);color:var(--g)}
+.csl{display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.csl-item{display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:7px;cursor:pointer;background:var(--stone);font-size:12px;color:var(--text-m)}
+.csl-item.on{background:var(--g-pale);color:var(--g)}
+.csl-item input[type=checkbox]{width:14px;height:14px;accent-color:var(--g)}
+.photo-preview{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.photo-thumb{position:relative;width:72px;height:72px;border-radius:7px;overflow:hidden;border:.5px solid var(--stone-mid)}
+.photo-thumb img{width:100%;height:100%;object-fit:cover}
+.del-photo{position:absolute;top:2px;right:2px;width:18px;height:18px;background:rgba(0,0,0,.65);color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:12px;line-height:18px;text-align:center;padding:0}
+.log-actions{display:flex;gap:6px;margin-top:8px;padding-top:8px;border-top:.5px solid var(--stone)}
+.btn-edit,.btn-tedit{padding:5px 12px;font-size:12px;border:.5px solid var(--g-mid);border-radius:6px;cursor:pointer;background:var(--g-pale);color:var(--g);font-family:var(--sans)}
+.btn-del,.btn-tdel{padding:5px 12px;font-size:12px;border:.5px solid #e74c3c;border-radius:6px;cursor:pointer;background:#ffeaea;color:#c0392b;font-family:var(--sans)}
+.edit-notice{background:var(--amber-l);border-left:3px solid var(--amber);padding:8px 12px;font-size:12px;color:#7a5800;margin-bottom:12px;border-radius:0 6px 6px 0}
+.log-top-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;cursor:pointer}
+.task-actions{display:flex;gap:4px;padding:4px 12px 6px 30px}
+.task-click-area{display:flex;align-items:flex-start;gap:10px;cursor:pointer;flex:1}
+
+
+.nb-bak{padding:5px 9px;font-size:15px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:7px;cursor:pointer;line-height:1;transition:.15s}
+.nb-bak:hover{background:rgba(255,255,255,.3)}
+</style>
+</head>
+<body>
+<header class="hd">
+  <div class="hd-in">
+    <div class="logo">
+      <span style="font-size:20px">🌱</span>
+      <span style="font-family:'Noto Serif KR',serif;font-size:15px;font-weight:700;letter-spacing:-.5px">이서의 사랑싹 텃밭</span>
+      <span class="logo-b">40번</span>
+    </div>
+    <nav class="nav">
+      <button class="nb on" id="nb-map" onclick="showPage('map')">도면</button>
+      <button class="nb" id="nb-schedule" onclick="showPage('schedule')">계획표</button>
+      <button class="nb" id="nb-journal" onclick="showPage('journal')">일지</button>
+      <button class="nb-bak" onclick="exportData()" title="데이터 백업">📤</button>
+      <button class="nb-bak" onclick="importData()" title="데이터 복원">📥</button>
+    </nav>
+  </div>
+</header>
+<main class="main">
+<!-- ════ 도면 ════ -->
+<div class="pg show" id="pg-map">
+  <div class="ph"><div class="pt">텃밭 도면</div><div class="ps">2026년 봄 시즌 · 구획1: 상추+버터헤드·부추·예비 / 구획2: 당근·완두콩</div></div>
+  <div class="mc">
+    <button class="mt on" id="mt-top" onclick="setMapView('top')">위에서 보기</button>
+    <button class="mt" id="mt-side" onclick="setMapView('side')">단면 보기</button>
+    <button class="mt" id="mt-exp" onclick="setMapView('explain')">간격 설명</button>
+    <div style="flex:1"></div>
+    <button class="lb on" id="lb-ridge" onclick="togL('ridge')">두둑/고랑</button>
+    <button class="lb on" id="lb-plant" onclick="togL('plant')">식물</button>
+    <button class="lb on" id="lb-dim" onclick="togL('dim')">치수</button>
+    <button class="lb on" id="lb-grid" onclick="togL('grid')">격자</button>
+  </div>
+  <div class="cw"><canvas id="mapC" width="680" height="560"></canvas></div>
+  <div class="mig">
+    <div class="mc2"><div class="mcl">선택 구역</div><div class="mcv" id="mi-z" style="font-size:12px">클릭해서 선택</div></div>
+    <div class="mc2"><div class="mcl">줄 구성</div><div class="mcv" id="mi-r" style="font-size:12px">—</div></div>
+    <div class="mc2"><div class="mcl">포기 간격</div><div class="mcv" id="mi-s">—</div></div>
+    <div class="mc2"><div class="mcl">총 포기 수</div><div class="mcv" id="mi-c">—</div></div>
+  </div>
+  <div class="md" id="map-det"><div class="mdt">구역을 클릭하면 상세 정보가 표시돼요 👆</div></div>
+  <div class="leg">
+    <div class="li"><div class="ld" style="background:#5aa030"></div>상추(줄1·3)</div>
+    <div class="li"><div class="ld" style="background:#b0d850"></div>버터헤드(줄2)</div>
+    <div class="li"><div class="ld" style="background:#9FE1CB;border:.5px solid #0F6E56"></div>부추</div>
+    <div class="li"><div class="ld" style="background:#F1EFE8;border:1px dashed #888"></div>예비구역</div>
+    <div class="li"><div class="ld" style="background:#FAC775;border:.5px solid #BA7517"></div>당근</div>
+    <div class="li"><div class="ld" style="background:#FAEEDA;border:.5px solid #854F0B"></div>완두콩</div>
+    <div class="li"><div class="ld" style="background:#B4B2A9"></div>고랑(20cm)</div>
+  </div>
+</div>
+
+
+<!-- ════ 계획표 ════ -->
+<div class="pg" id="pg-schedule">
+  <div class="ph"><div class="pt">시즌 계획표</div><div class="ps">2026년 3월~8월 · 클릭해서 완료 체크!</div></div>
+  <div class="sg">
+    <div class="sc"><div class="sn" id="st-t">30</div><div class="sl">전체 할일</div></div>
+    <div class="sc"><div class="sn" id="st-d" style="color:var(--g)">0</div><div class="sl">완료</div></div>
+    <div class="sc"><div class="sn" id="st-l" style="color:#c0392b">30</div><div class="sl">남은 일정</div></div>
+  </div>
+  <div class="pw">
+    <div class="pl"><span>진행률</span><span id="pp">0%</span></div>
+    <div class="pb"><div class="pf" id="pf" style="width:0%"></div></div>
+  </div>
+  <div style="display:flex;justify-content:flex-end;margin-bottom:8px"><button id="add-task-btn" style="padding:7px 16px;font-size:12px;background:var(--g);color:#fff;border:none;border-radius:6px;cursor:pointer;font-family:var(--sans)">+ 할 일 추가</button></div><div class="mf">
+    <button class="mfb on" id="mfb-all" onclick="setMonthFilter('all')">전체</button>
+    <button class="mfb" id="mfb-03" onclick="setMonthFilter('03')">3월</button>
+    <button class="mfb" id="mfb-04" onclick="setMonthFilter('04')">4월</button>
+    <button class="mfb" id="mfb-05" onclick="setMonthFilter('05')">5월</button>
+    <button class="mfb" id="mfb-06" onclick="setMonthFilter('06')">6월</button>
+    <button class="mfb" id="mfb-07" onclick="setMonthFilter('07')">7~8월</button>
+  </div>
+  <div id="task-wrap"></div>
+</div>
+
+
+<!-- ════ 일지 ════ -->
+<div class="pg" id="pg-journal">
+  <div class="ph"><div class="pt">텃밭 일지</div><div class="ps" id="j-cnt">기록 0건 · 2026년 봄</div></div>
+  <div class="jnav" id="jnav">
+    <button class="jnb on" data-jp="write">✏️ 일지 쓰기</button>
+    <button class="jnb" data-jp="list">📋 기록 보기</button>
+    <button class="jnb" data-jp="growth">📈 생육 현황</button>
+  </div>
+  <div class="jp show" id="jp-write">
+    <div id="edit-notice-wrap"></div>
+    <div class="jsec"><span class="jlb">날짜 &amp; 방문</span>
+      <div class="jrow"><input class="jin" type="date" id="j-date" value="2026-03-28" style="flex:1;min-width:130px">
+      <select class="jsel" id="j-vis" style="width:auto"><option>아침</option><option selected>오후</option><option>저녁</option></select></div></div>
+    <div class="jsec"><span class="jlb">날씨</span>
+      <div class="jrow" id="wx-btns">
+        <button class="jb wx" data-val="☀️ 맑음">☀️ 맑음</button>
+        <button class="jb wx" data-val="⛅ 구름">⛅ 구름</button>
+        <button class="jb wx" data-val="🌧 비">🌧 비</button>
+        <button class="jb wx" data-val="🌫 흐림">🌫 흐림</button>
+        <button class="jb wx" data-val="❄️ 눈">❄️ 눈</button>
+      </div>
+      <div class="jrow" style="margin-top:8px"><input class="jin" type="number" id="j-tmp" placeholder="기온°C" style="width:90px"><input class="jin" type="number" id="j-tlo" placeholder="최저°C" style="width:90px"></div></div>
+    <div class="jsec"><span class="jlb">물주기</span>
+      <div class="jrow" id="wt-btns">
+        <button class="jb wt" data-val="💧 흠뻑 줌">💧 흠뻑 줌</button>
+        <button class="jb wt" data-val="🌦 비로 패스">🌦 비로 패스</button>
+        <button class="jb wt" data-val="❌ 안 줌">❌ 안 줌</button>
+      </div></div>
+    <div class="jsec"><span class="jlb">오늘 한 일</span>
+      <div class="jrow" id="act-list">
+        <button class="jb act">🌱 파종</button>
+        <button class="jb act">🪴 모종 심기</button>
+        <button class="jb act">✂️ 솎기</button>
+        <button class="jb act">🌾 수확</button>
+        <button class="jb act">💊 비료/웃거름</button>
+        <button class="jb act">🪵 지지대 설치</button>
+        <button class="jb act">🌿 잡초 제거</button>
+        <button class="jb act">🔍 병해충 확인</button>
+        <button class="add-new-btn" id="act-add-btn" data-action="show-act-input">+ 직접 추가</button>
+      </div>
+      <div class="add-row" id="act-add-row" style="display:none">
+        <input class="jin" type="text" id="act-inp" placeholder="예) 멀칭, 적심...">
+        <button class="add-ok-btn" data-action="confirm-act">추가</button>
+        <button class="add-cancel-btn" data-action="cancel-act">취소</button>
+      </div></div>
+    <div class="jsec"><span class="jlb">작물별 상태 <span style="font-size:11px;color:var(--text-l);font-weight:400">(복수 선택 가능)</span></span>
+      <div class="ctabs" id="crop-tabs">
+        <button class="ct on" data-cid="lettuce" style="background:#3B6D11;border-color:#3B6D11;color:#fff">🥬 상추</button>
+        <button class="ct" data-cid="chive">🌱 부추</button>
+        <button class="ct" data-cid="carrot">🥕 당근</button>
+        <button class="ct" data-cid="pea">🫛 완두콩</button>
+        <button class="ct" data-cid="reserve">🌻 예비</button>
+      </div>
+      <div id="cp-lettuce" class="cp show">
+        <div class="cg" style="margin-bottom:8px">
+          <div><span class="jlb">키/길이(cm)</span><input class="jin" type="number" id="c-l-h" placeholder="예)8"></div>
+          <div><span class="jlb">추가 메모</span><input class="jin" type="text" id="c-l-n2" placeholder="자유롭게..."></div>
+        </div>
+        <span class="jlb" style="display:block;margin-bottom:5px">상태 선택</span>
+        <div class="csl" id="csl-lettuce">
+          <label class="csl-item"><input type="checkbox" value="🌱 발아/새싹"> 🌱 발아/새싹</label>
+          <label class="csl-item"><input type="checkbox" value="🌿 정상 생장"> 🌿 정상 생장</label>
+          <label class="csl-item"><input type="checkbox" value="🌾 수확 가능"> 🌾 수확 가능</label>
+          <label class="csl-item"><input type="checkbox" value="🌻 추대 시작"> 🌻 추대 시작</label>
+          <label class="csl-item"><input type="checkbox" value="⚠️ 이상 있음"> ⚠️ 이상 있음</label>
+          <label class="csl-item"><input type="checkbox" value="💧 물 부족"> 💧 물 부족</label>
+          <button class="add-new-btn" data-cid="lettuce" data-action="add-status">+ 상태 직접 추가</button>
+          <div class="add-row" id="si-lettuce" style="display:none">
+            <input class="jin" type="text" id="sii-lettuce" placeholder="상태 입력...">
+            <button class="add-ok-btn" data-cid="lettuce" data-action="confirm-status">추가</button>
+            <button class="add-cancel-btn" data-cid="lettuce" data-action="cancel-status">취소</button>
+          </div>
+        </div>
+        <textarea class="jta" id="c-l-n" rows="2" placeholder="상세 메모..."></textarea>
+      </div>
+      <div id="cp-chive" class="cp">
+        <div class="cg" style="margin-bottom:8px">
+          <div><span class="jlb">키/길이(cm)</span><input class="jin" type="number" id="c-c-h" placeholder="예)8"></div>
+          <div><span class="jlb">추가 메모</span><input class="jin" type="text" id="c-c-n2" placeholder="자유롭게..."></div>
+        </div>
+        <span class="jlb" style="display:block;margin-bottom:5px">상태 선택</span>
+        <div class="csl" id="csl-chive">
+          <label class="csl-item"><input type="checkbox" value="🌱 발아/새싹"> 🌱 발아/새싹</label>
+          <label class="csl-item"><input type="checkbox" value="🌿 정상 생장"> 🌿 정상 생장</label>
+          <label class="csl-item"><input type="checkbox" value="🌾 수확 가능"> 🌾 수확 가능</label>
+          <label class="csl-item"><input type="checkbox" value="⚠️ 이상 있음"> ⚠️ 이상 있음</label>
+          <label class="csl-item"><input type="checkbox" value="💪 뿌리 내리는 중"> 💪 뿌리 내리는 중</label>
+          <button class="add-new-btn" data-cid="chive" data-action="add-status">+ 상태 직접 추가</button>
+          <div class="add-row" id="si-chive" style="display:none">
+            <input class="jin" type="text" id="sii-chive" placeholder="상태 입력...">
+            <button class="add-ok-btn" data-cid="chive" data-action="confirm-status">추가</button>
+            <button class="add-cancel-btn" data-cid="chive" data-action="cancel-status">취소</button>
+          </div>
+        </div>
+        <textarea class="jta" id="c-c-n" rows="2" placeholder="상세 메모..."></textarea>
+      </div>
+      <div id="cp-carrot" class="cp">
+        <div class="cg" style="margin-bottom:8px">
+          <div><span class="jlb">키/길이(cm)</span><input class="jin" type="number" id="c-r-h" placeholder="예)8"></div>
+          <div><span class="jlb">추가 메모</span><input class="jin" type="text" id="c-r-n2" placeholder="자유롭게..."></div>
+        </div>
+        <span class="jlb" style="display:block;margin-bottom:5px">상태 선택</span>
+        <div class="csl" id="csl-carrot">
+          <label class="csl-item"><input type="checkbox" value="🌱 발아 전"> 🌱 발아 전</label>
+          <label class="csl-item"><input type="checkbox" value="🌱 발아 중"> 🌱 발아 중</label>
+          <label class="csl-item"><input type="checkbox" value="🌿 본잎 생장"> 🌿 본잎 생장</label>
+          <label class="csl-item"><input type="checkbox" value="✂️ 솎기 필요"> ✂️ 솎기 필요</label>
+          <label class="csl-item"><input type="checkbox" value="🥕 수확 가능"> 🥕 수확 가능</label>
+          <label class="csl-item"><input type="checkbox" value="⚠️ 이상 있음"> ⚠️ 이상 있음</label>
+          <button class="add-new-btn" data-cid="carrot" data-action="add-status">+ 상태 직접 추가</button>
+          <div class="add-row" id="si-carrot" style="display:none">
+            <input class="jin" type="text" id="sii-carrot" placeholder="상태 입력...">
+            <button class="add-ok-btn" data-cid="carrot" data-action="confirm-status">추가</button>
+            <button class="add-cancel-btn" data-cid="carrot" data-action="cancel-status">취소</button>
+          </div>
+        </div>
+        <textarea class="jta" id="c-r-n" rows="2" placeholder="상세 메모..."></textarea>
+      </div>
+      <div id="cp-pea" class="cp">
+        <div class="cg" style="margin-bottom:8px">
+          <div><span class="jlb">키/길이(cm)</span><input class="jin" type="number" id="c-p-h" placeholder="예)8"></div>
+          <div><span class="jlb">추가 메모</span><input class="jin" type="text" id="c-p-n2" placeholder="자유롭게..."></div>
+        </div>
+        <span class="jlb" style="display:block;margin-bottom:5px">상태 선택</span>
+        <div class="csl" id="csl-pea">
+          <label class="csl-item"><input type="checkbox" value="🌱 발아 중"> 🌱 발아 중</label>
+          <label class="csl-item"><input type="checkbox" value="🌿 생장 중"> 🌿 생장 중</label>
+          <label class="csl-item"><input type="checkbox" value="🌸 개화"> 🌸 개화</label>
+          <label class="csl-item"><input type="checkbox" value="🫛 열매 맺음"> 🫛 열매 맺음</label>
+          <label class="csl-item"><input type="checkbox" value="🌾 수확 가능"> 🌾 수확 가능</label>
+          <label class="csl-item"><input type="checkbox" value="⚠️ 이상 있음"> ⚠️ 이상 있음</label>
+          <button class="add-new-btn" data-cid="pea" data-action="add-status">+ 상태 직접 추가</button>
+          <div class="add-row" id="si-pea" style="display:none">
+            <input class="jin" type="text" id="sii-pea" placeholder="상태 입력...">
+            <button class="add-ok-btn" data-cid="pea" data-action="confirm-status">추가</button>
+            <button class="add-cancel-btn" data-cid="pea" data-action="cancel-status">취소</button>
+          </div>
+        </div>
+        <textarea class="jta" id="c-p-n" rows="2" placeholder="상세 메모..."></textarea>
+      </div>
+      <div id="cp-reserve" class="cp">
+        <div class="cg" style="margin-bottom:8px">
+          <div><span class="jlb">키/길이(cm)</span><input class="jin" type="number" id="c-v-h" placeholder="예)8"></div>
+          <div><span class="jlb">추가 메모</span><input class="jin" type="text" id="c-v-n2" placeholder="자유롭게..."></div>
+        </div>
+        <span class="jlb" style="display:block;margin-bottom:5px">상태 선택</span>
+        <div class="csl" id="csl-reserve">
+          <label class="csl-item"><input type="checkbox" value="⏳ 대기 중"> ⏳ 대기 중</label>
+          <label class="csl-item"><input type="checkbox" value="🪴 모종 심음"> 🪴 모종 심음</label>
+          <label class="csl-item"><input type="checkbox" value="🌿 정상 생장"> 🌿 정상 생장</label>
+          <label class="csl-item"><input type="checkbox" value="🌸 개화"> 🌸 개화</label>
+          <label class="csl-item"><input type="checkbox" value="🍅 수확 가능"> 🍅 수확 가능</label>
+          <label class="csl-item"><input type="checkbox" value="⚠️ 이상 있음"> ⚠️ 이상 있음</label>
+          <button class="add-new-btn" data-cid="reserve" data-action="add-status">+ 상태 직접 추가</button>
+          <div class="add-row" id="si-reserve" style="display:none">
+            <input class="jin" type="text" id="sii-reserve" placeholder="상태 입력...">
+            <button class="add-ok-btn" data-cid="reserve" data-action="confirm-status">추가</button>
+            <button class="add-cancel-btn" data-cid="reserve" data-action="cancel-status">취소</button>
+          </div>
+        </div>
+        <textarea class="jta" id="c-v-n" rows="2" placeholder="상세 메모..."></textarea>
+      </div>
+    </div>
+    <div class="jsec"><span class="jlb">📷 사진 첨부</span>
+      <div class="phdrop" id="photo-drop"><div style="font-size:24px;margin-bottom:4px">📷</div><div>탭해서 사진 선택 (여러 장 가능)</div></div>
+      <input type="file" id="j-pf" accept="image/*" multiple style="display:none">
+      <div class="photo-preview" id="photo-preview"></div>
+      <textarea class="jta" id="j-pn" rows="2" placeholder="사진 메모..." style="margin-top:6px"></textarea></div>
+    <div class="jsec"><span class="jlb">💬 오늘의 한마디</span>
+      <textarea class="jta" id="j-ov" rows="2" placeholder="오늘 텃밭 어땠나요?"></textarea></div>
+    <button class="jsb" id="save-btn">💾 일지 저장하기</button>
+    <div style="margin-top:12px;padding:10px 14px;background:var(--stone);border-radius:8px;font-size:12px;color:var(--text-l);line-height:1.7">
+      💡 <strong style="color:var(--text-m)">다른 기기에서 이어보려면</strong><br>
+      헤더 📤 버튼으로 백업 저장 → 카카오톡 파일 전송 → 다른 기기에서 📥 불러오기
+    </div>
+  </div>
+  <div class="jp" id="jp-list">
+    <div class="lf" id="log-filter-btns">
+      <button class="lfb on" data-lf="all">전체</button>
+      <button class="lfb" data-lf="lettuce">🥬 상추</button>
+      <button class="lfb" data-lf="chive">🌱 부추</button>
+      <button class="lfb" data-lf="carrot">🥕 당근</button>
+      <button class="lfb" data-lf="pea">🫛 완두콩</button>
+      <button class="lfb" data-lf="harvest">🌾 수확</button>
+    </div>
+    <div class="ll" id="log-list"></div>
+  </div>
+  <div class="jp" id="jp-growth"><div class="grg">
+    <div class="grc"><div class="gct"><div class="gcn">🥬 상추+버터헤드</div><div class="gcs" id="gcs-l" style="background:var(--g-pale);color:var(--g)">대기중</div></div><div class="gcb"><div class="gcf" id="gcb-l" style="width:0%;background:#639922"></div></div><div class="gcst"><div><div class="gcsl">최근 키</div><div class="gcsv" id="gcv-lh">—</div></div><div><div class="gcsl">최근 기록</div><div class="gcsv" id="gcv-ld">—</div></div><div><div class="gcsl">기록 횟수</div><div class="gcsv" id="gcv-lc">0회</div></div><div><div class="gcsl">마지막 활동</div><div class="gcsv" id="gcv-la">—</div></div></div></div>
+    <div class="grc"><div class="gct"><div class="gcn">🌱 부추</div><div class="gcs" id="gcs-c" style="background:#e1f5ee;color:#085041">대기중</div></div><div class="gcb"><div class="gcf" id="gcb-c" style="width:0%;background:#0F6E56"></div></div><div class="gcst"><div><div class="gcsl">최근 키</div><div class="gcsv" id="gcv-ch">—</div></div><div><div class="gcsl">최근 기록</div><div class="gcsv" id="gcv-cd">—</div></div><div><div class="gcsl">기록 횟수</div><div class="gcsv" id="gcv-cc">0회</div></div><div><div class="gcsl">마지막 활동</div><div class="gcsv" id="gcv-ca">—</div></div></div></div>
+    <div class="grc"><div class="gct"><div class="gcn">🥕 당근</div><div class="gcs" id="gcs-r" style="background:var(--amber-l);color:#633806">대기중</div></div><div class="gcb"><div class="gcf" id="gcb-r" style="width:0%;background:#BA7517"></div></div><div class="gcst"><div><div class="gcsl">최근 키</div><div class="gcsv" id="gcv-rh">—</div></div><div><div class="gcsl">최근 기록</div><div class="gcsv" id="gcv-rd">—</div></div><div><div class="gcsl">기록 횟수</div><div class="gcsv" id="gcv-rc">0회</div></div><div><div class="gcsl">마지막 활동</div><div class="gcsv" id="gcv-ra">—</div></div></div></div>
+    <div class="grc"><div class="gct"><div class="gcn">🫛 완두콩</div><div class="gcs" id="gcs-p" style="background:var(--amber-l);color:#854F0B">대기중</div></div><div class="gcb"><div class="gcf" id="gcb-p" style="width:0%;background:#854F0B"></div></div><div class="gcst"><div><div class="gcsl">최근 키</div><div class="gcsv" id="gcv-ph">—</div></div><div><div class="gcsl">최근 기록</div><div class="gcsv" id="gcv-pd">—</div></div><div><div class="gcsl">기록 횟수</div><div class="gcsv" id="gcv-pc">0회</div></div><div><div class="gcsl">마지막 활동</div><div class="gcsv" id="gcv-pa">—</div></div></div></div>
+  </div><p style="text-align:center;font-size:12px;color:var(--text-l);margin-top:12px">일지를 기록하면 자동 업데이트돼요 🌱</p></div>
+</div>
+</main>
+<div class="toast" id="toast"></div>
+<div class="mo" id="modal" onclick="closeModal()">
+  <div class="mox" onclick="event.stopPropagation()">
+    <div class="mot" id="mot"></div>
+    <div id="mob"></div>
+    <button class="moc" onclick="closeModal()">닫기</button>
+  </div>
+</div>
+<script>
+
+/* ═══════════ 상태 ═══════════ */
+var S={
+  page:'map',
+  mapV:'top',
+  mapSel:null,
+  L:{ridge:true,plant:true,dim:true,grid:true},
+  done:new Set(JSON.parse(localStorage.getItem('gDone')||'[]')),
+  mf:'all',
+  logs:JSON.parse(localStorage.getItem('gLogs')||'[]'),
+  jW:'', jWt:'', lf:'all', tf:'all',
+  editingId:null, photos:[],
+  customActs:JSON.parse(localStorage.getItem('gCustomActs')||'[]'),
+  customStatuses:JSON.parse(localStorage.getItem('gCustomStatuses')||'{}')
+};
+
+var CN={lettuce:"🥬 상추",chive:"🌱 부추",carrot:"🥕 당근",pea:"🫛 완두콩",reserve:"🌻 예비"};
+var CROP_SHORT={lettuce:"l",chive:"c",carrot:"r",pea:"p",reserve:"v"};
+var CROP_MH={lettuce:30,chive:25,carrot:15,pea:120,reserve:150};
+var CUSTOM_TASKS=JSON.parse(localStorage.getItem("gCustomTasks")||"[]");
+function TASKS_ALL(){return TASKS.concat(CUSTOM_TASKS).sort(function(a,b){return a.date>b.date?1:-1;});}
+
+/* ═══════════ 도면 데이터 ═══════════ */
+var SC=2.2,PW=Math.round(80*SC),PH=Math.round(200*SC),RW=Math.round(60*SC),GW=Math.round(20*SC),PAX=54,PAY=44,P1X=PAX,P2X=PAX+PW+72;
+var ZS=[
+  {id:'lettuce',name:'상추+버터헤드',plot:1,yFr:0,yTo:.5,color:'#C8E890',sc:'#639922',tc:'#27500A',rh:10,rows:[{o:10,t:'s',n:5},{o:30,t:'b',n:5},{o:50,t:'s',n:5}],sp:20,tp:15,info:{'두둑 높이':'10cm','두둑 폭':'60cm','고랑':'오른쪽 20cm','줄 수':'3줄(줄간격 20cm)','줄1(10cm)':'상추 5포기','줄2(30cm)':'버터헤드 5포기','줄3(50cm)':'상추 5포기','포기 간격':'20cm','총 포기 수':'15포기'},tip:'줄1·3=상추(짙은초록), 줄2=버터헤드(연두). 교대 배치!'},
+  {id:'chive',name:'부추',plot:1,yFr:.5,yTo:.8,color:'#9FE1CB',sc:'#0F6E56',tc:'#085041',rh:8,rows:[{o:5,t:'c',n:6},{o:15,t:'c',n:6},{o:25,t:'c',n:6},{o:35,t:'c',n:6},{o:45,t:'c',n:6},{o:55,t:'c',n:6},{o:65,t:'c',n:6},{o:75,t:'c',n:6}],sp:10,tp:48,info:{'두둑 높이':'8cm','두둑 폭':'80cm 전체','고랑':'없음','줄 수':'8줄(10cm 간격)','포기 간격':'10cm','총 포기 수':'48포기'},tip:'다년생! 올해만이라면 대파·열무로 대체 추천'},
+  {id:'reserve',name:'예비구역(5월~)',plot:1,yFr:.8,yTo:1,color:'#F1EFE8',sc:'#888780',tc:'#444441',rh:10,rows:[],sp:0,tp:0,info:{'두둑 높이':'10cm','두둑 폭':'60cm','고랑':'오른쪽 20cm','구역 길이':'40cm','예정':'방울토마토·고추·바질','시기':'5월 모종'},tip:'5월 초 모종 구입 후 심기!'},
+  {id:'carrot',name:'당근',plot:2,yFr:0,yTo:.5,color:'#FAC775',sc:'#BA7517',tc:'#633806',rh:15,rows:[{o:5,t:'r',n:10},{o:15,t:'r',n:10},{o:25,t:'r',n:10},{o:35,t:'r',n:10},{o:45,t:'r',n:10},{o:55,t:'r',n:10}],sp:10,tp:60,info:{'두둑 높이':'15cm(가장 높게!)','두둑 폭':'60cm','고랑':'오른쪽 20cm','줄 수':'6줄(10cm 간격)','포기 간격':'10cm(솎기 후)','총 포기 수':'60개'},tip:'줄뿌림 후 본잎 3~4장 때 10cm로 솎기!'},
+  {id:'pea',name:'완두콩',plot:2,yFr:.5,yTo:1,color:'#FAEEDA',sc:'#854F0B',tc:'#412402',rh:10,rows:[{o:10,t:'p',n:6},{o:50,t:'p',n:6}],sp:15,tp:12,info:{'두둑 높이':'10cm','두둑 폭':'60cm','고랑':'오른쪽 20cm','줄 수':'2줄(40cm 간격)','포기 간격':'15cm','총 포기 수':'12포기'},tip:'지지대 1.2m 먼저! 두 줄 사이 40cm로 다니며 수확'}
+];
+var CC={lettuce:'#3B6D11',chive:'#085041',carrot:'#BA7517',pea:'#854F0B',reserve:'#e65100',준비:'#1565c0',관리:'#888'};
+var MH={lettuce:30,chive:25,carrot:15,pea:120,reserve:150};
+
+/* ═══════════ 계획표 데이터 ═══════════ */
+
+var TASKS=[
+  {id:"t01",date:"2026-03-28",m:"03",e:"🪣",n:"퇴비+흙 최종 혼합",d:"삽·호미로 깊이 15~20cm. 당근 구역 30cm 이상. 가족 모두 함께!",b:"u",bt:"🏠주말",c:"준비",big:true},
+  {id:"t02",date:"2026-03-28",m:"03",e:"🛒",n:"씨앗·모종 구매",d:"완두콩·당근 씨앗, 상추·버터헤드·부추 모종 구매.",b:"u",bt:"🏠주말",c:"준비",big:true},
+  {id:"t03",date:"2026-03-28",m:"03",e:"🪵",n:"완두콩 지지대 설치",d:"왜성종이라 50~60cm 짧은 막대 OK. 씨앗 심기 전 필수.",b:"u",bt:"🏠주말",c:"완두콩",big:true},
+  {id:"t04",date:"2026-03-28",m:"03",e:"🫛",n:"완두콩 씨앗 파종",d:"두둑 내 10·50cm 위치 2줄. 포기 간격 15cm. 깊이 3~4cm.",b:"u",bt:"🏠주말",c:"완두콩",big:true},
+  {id:"t05",date:"2026-03-28",m:"03",e:"🥕",n:"당근 씨앗 줄뿌림",d:"6줄(5·15·25·35·45·55cm) 5cm 간격. 복토 0.5cm.",b:"u",bt:"🏠주말",c:"당근",big:true},
+  {id:"t06",date:"2026-03-28",m:"03",e:"🥬",n:"상추+버터헤드 모종 심기",d:"줄1·3=상추, 줄2=버터헤드. 포기 간격 20cm. 총 15포기.",b:"u",bt:"🏠주말",c:"상추",big:true},
+  {id:"t07",date:"2026-03-28",m:"03",e:"🌱",n:"부추 모종 심기",d:"8줄x10cm. 포기 간격 10cm. 뿌리 깊이 심기.",b:"u",bt:"🏠주말",c:"부추",big:true},
+  {id:"t08",date:"2026-04-01",m:"03",e:"💧",n:"첫 물주기 & 발아 확인",d:"흠뻑 물주기. 완두콩 발아 확인. 아기랑 잠깐 방문 OK!",b:"n",bt:"💧평일",c:"관리",big:false},
+  {id:"t09",date:"2026-04-04",m:"04",e:"🌿",n:"완두콩 발아 & 덩굴 유도",d:"지지대에 살살 유도. 촘촘한 곳 솎기.",b:"",bt:"🏠주말",c:"완두콩",big:true},
+  {id:"t10",date:"2026-04-08",m:"04",e:"💧",n:"물주기 & 상추 상태",d:"바깥잎 솎아 먹기 시작! 아기랑 방문 가능.",b:"n",bt:"💧평일",c:"상추",big:false},
+  {id:"t11",date:"2026-04-11",m:"04",e:"🥕",n:"당근 발아 확인",d:"발아율 확인. 빈 곳 보파. 아기랑 잠깐!",b:"n",bt:"💧평일",c:"당근",big:false},
+  {id:"t12",date:"2026-04-15",m:"04",e:"💧",n:"부추 새싹 확인",d:"새싹 올라오는지, 잡초 뽑기. 평일 방문.",b:"n",bt:"💧평일",c:"부추",big:false},
+  {id:"t13",date:"2026-04-25",m:"04",e:"✂️",n:"당근 1차 솎기",d:"본잎 2~3장 후 7cm 간격. 솎아낸 것 샐러드로!",b:"",bt:"🏠주말",c:"당근",big:true},
+  {id:"t14",date:"2026-04-25",m:"04",e:"💊",n:"웃거름 1차",d:"상추·완두콩 구역 액비 또는 과립비료 소량.",b:"p",bt:"🏠주말",c:"관리",big:true},
+  {id:"t15",date:"2026-04-29",m:"04",e:"🥬",n:"상추 본격 수확",d:"바깥잎부터! 속잎은 남겨서 계속 자라게.",b:"h",bt:"💧평일",c:"상추",big:false},
+  {id:"t16",date:"2026-05-02",m:"05",e:"✂️",n:"당근 2차 솎기(최종)",d:"본잎 4~5장 후 10cm 최종 솎기. 가족 나들이 겸!",b:"",bt:"🏠주말",c:"당근",big:true},
+  {id:"t17",date:"2026-05-06",m:"05",e:"🛒",n:"예비구역 모종 구매",d:"방울토마토·고추·바질 모종 구매.",b:"p",bt:"💧평일",c:"예비",big:false},
+  {id:"t18",date:"2026-05-09",m:"05",e:"🍅",n:"예비구역 모종 심기",d:"구획1 하단 40cm. 방울토마토·고추. 가족 함께!",b:"n",bt:"🏠주말",c:"예비",big:true},
+  {id:"t19",date:"2026-05-13",m:"05",e:"💧",n:"물주기 & 완두콩 꽃 확인",d:"흰 꽃 피기 시작! 아기랑 꽃구경.",b:"n",bt:"💧평일",c:"완두콩",big:false},
+  {id:"t20",date:"2026-05-23",m:"05",e:"🌱",n:"부추 1차 수확",d:"15~20cm 이상 자라면 지표 3cm 위 자르기. 첫 수확!",b:"h",bt:"🏠주말",c:"부추",big:true},
+  {id:"t21",date:"2026-05-30",m:"05",e:"💊",n:"웃거름 2차",d:"전 구역 액비. 방울토마토는 칼슘비료 추가.",b:"p",bt:"🏠주말",c:"관리",big:true},
+  {id:"t22",date:"2026-06-06",m:"06",e:"🫛",n:"완두콩 수확 시작",d:"꼬투리 통통하면 수확! 아이들이랑 콩 따기 함께!",b:"h",bt:"🏠주말",c:"완두콩",big:true},
+  {id:"t23",date:"2026-06-13",m:"06",e:"🥕",n:"당근 시험 수확",d:"굵은 것 뽑아 확인. 지름 2cm 이상 OK. 아이들이 직접!",b:"h",bt:"🏠주말",c:"당근",big:true},
+  {id:"t24",date:"2026-06-17",m:"06",e:"💧",n:"상추 추대 확인",d:"줄기 높아지면 추대 징조. 아기랑 잠깐.",b:"p",bt:"💧평일",c:"상추",big:false},
+  {id:"t25",date:"2026-06-20",m:"06",e:"🍅",n:"방울토마토 곁순 제거",d:"겨드랑이 곁순 정기 제거. 2~3줄기 유인.",b:"p",bt:"💧평일",c:"예비",big:false},
+  {id:"t26",date:"2026-06-27",m:"06",e:"🫛",n:"완두콩 마무리 & 정리",d:"수확 끝나면 줄기 뽑기. 지지대 정리. 가족 함께!",b:"",bt:"🏠주말",c:"완두콩",big:true},
+  {id:"t27",date:"2026-07-04",m:"07",e:"🥕",n:"당근 본 수확",d:"7월 초 본격 수확! 아이들이랑 당근 뽑기. 인생사진!",b:"h",bt:"🏠주말",c:"당근",big:true},
+  {id:"t28",date:"2026-07-11",m:"07",e:"🍅",n:"방울토마토 수확",d:"붉게 익은 것부터 수확. 매주 방문!",b:"h",bt:"🏠주말",c:"예비",big:true},
+  {id:"t29",date:"2026-07-22",m:"07",e:"🌶",n:"고추 첫 수확",d:"청고추 or 빨갛게 익힌 후 수확.",b:"h",bt:"💧평일",c:"예비",big:false},
+  {id:"t30",date:"2026-08-01",m:"07",e:"📋",n:"시즌 마무리 & 메모",d:"올해 잘 된 것과 아쉬운 것 기록. 내년 분양 계획!",b:"p",bt:"",c:"관리",big:false}
+];
+
+
+/* ═══════════ 페이지 전환 ═══════════ */
+function showPage(p){
+  document.querySelectorAll('.pg').forEach(function(el){el.classList.remove('show');});
+  document.querySelectorAll('.nb').forEach(function(el){el.classList.remove('on');});
+  document.getElementById('pg-'+p).classList.add('show');
+  document.getElementById('nb-'+p).classList.add('on');
+  S.page=p;
+  if(p==='map') setTimeout(drawMap,10);
+  if(p==='schedule') renderTasks();
+}
+
+/* ═══════════ 도면 ═══════════ */
+function zR(z){var px=z.plot===1?P1X:P2X;return{x:px,y:PAY+z.yFr*PH,w:PW,h:(z.yTo-z.yFr)*PH};}
+function pc(t){var m={s:{o:'#3B6D11',i:'#7ac840'},b:{o:'#6a9e10',i:'#bce050'},c:{o:'#085041',i:'#5dcaa0'},r:{o:'#993C1D',i:'#E8741C'},p:{o:'#633806',i:'#c8a040'}};return m[t]||{o:'#444',i:'#888'};}
+
+function setMapView(v){
+  S.mapV=v;
+  ['top','side','exp'].forEach(function(k){document.getElementById('mt-'+k).classList.remove('on');});
+  document.getElementById('mt-'+v).classList.add('on');
+  drawMap();
+}
+function togL(k){
+  S.L[k]=!S.L[k];
+  document.getElementById('lb-'+k).classList.toggle('on',S.L[k]);
+  drawMap();
+}
+function drawMap(){
+  var canvas=document.getElementById('mapC');
+  if(!canvas) return;
+  var ctx=canvas.getContext('2d');
+  if(S.mapV==='top') drawTop(ctx);
+  else if(S.mapV==='side') drawSide(ctx);
+  else drawExp(ctx);
+}
+function aH(ctx,x1,y,x2,col){ctx.strokeStyle=col;ctx.fillStyle=col;ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(x1,y);ctx.lineTo(x2,y);ctx.stroke();ctx.beginPath();ctx.moveTo(x1,y);ctx.lineTo(x1+5,y-3);ctx.lineTo(x1+5,y+3);ctx.closePath();ctx.fill();ctx.beginPath();ctx.moveTo(x2,y);ctx.lineTo(x2-5,y-3);ctx.lineTo(x2-5,y+3);ctx.closePath();ctx.fill();}
+function aV(ctx,x,y1,y2,col){ctx.strokeStyle=col;ctx.fillStyle=col;ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(x,y1);ctx.lineTo(x,y2);ctx.stroke();ctx.beginPath();ctx.moveTo(x,y1);ctx.lineTo(x-3,y1+5);ctx.lineTo(x+3,y1+5);ctx.closePath();ctx.fill();ctx.beginPath();ctx.moveTo(x,y2);ctx.lineTo(x-3,y2-5);ctx.lineTo(x+3,y2-5);ctx.closePath();ctx.fill();}
+
+function drawTop(ctx){
+  var W=680,H=560,L=S.L;
+  ctx.clearRect(0,0,W,H);
+  [P1X,P2X].forEach(function(px){ctx.fillStyle='#7a5428';ctx.fillRect(px-4,PAY-4,PW+8,PH+8);ctx.fillStyle='#9a6838';ctx.fillRect(px-2,PAY-2,PW+4,PH+4);});
+  ZS.forEach(function(z){
+    var r=zR(z),isC=z.id==='chive',isR=z.id==='reserve';
+    if(!L.ridge){ctx.fillStyle=z.color+'55';ctx.fillRect(r.x,r.y,r.w,r.h);}
+    else if(isC){ctx.fillStyle=z.color;ctx.fillRect(r.x,r.y,r.w,r.h);ctx.strokeStyle=z.sc;ctx.lineWidth=.7;ctx.strokeRect(r.x,r.y,r.w,r.h);for(var i=1;i<8;i++){var lx=r.x+Math.round(i*10*SC);ctx.strokeStyle=z.sc+'44';ctx.lineWidth=.4;ctx.beginPath();ctx.moveTo(lx,r.y);ctx.lineTo(lx,r.y+r.h);ctx.stroke();}}
+    else{ctx.fillStyle=z.color;ctx.fillRect(r.x,r.y,RW,r.h);ctx.fillStyle='#B4B2A9';ctx.fillRect(r.x+RW,r.y,GW,r.h);if(isR){ctx.setLineDash([5,3]);ctx.strokeStyle=z.sc;ctx.lineWidth=.8;ctx.strokeRect(r.x+1,r.y+1,RW-2,r.h-2);ctx.setLineDash([]);}ctx.strokeStyle=z.sc;ctx.lineWidth=.7;ctx.strokeRect(r.x,r.y,r.w,r.h);ctx.strokeStyle='#99999955';ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(r.x+RW,r.y);ctx.lineTo(r.x+RW,r.y+r.h);ctx.stroke();}
+    if(L.grid){var st=Math.round(10*SC);ctx.strokeStyle='rgba(90,70,30,.1)';ctx.lineWidth=.4;ctx.setLineDash([2,3]);for(var gx=r.x;gx<=r.x+r.w;gx+=st){ctx.beginPath();ctx.moveTo(gx,r.y);ctx.lineTo(gx,r.y+r.h);ctx.stroke();}for(var gy=r.y;gy<=r.y+r.h;gy+=st){ctx.beginPath();ctx.moveTo(r.x,gy);ctx.lineTo(r.x+r.w,gy);ctx.stroke();}ctx.setLineDash([]);}
+    if(L.plant&&!isR&&z.rows.length){
+      var mx=isC?r.w:RW,zLen=(z.yTo-z.yFr)*200;
+      z.rows.forEach(function(row){
+        var cx=r.x+Math.round(row.o*SC);if(cx>r.x+mx-1) return;
+        var col=pc(row.t),pr=row.t==='c'?3:row.t==='r'?4:6,nR=Math.floor((zLen-z.sp/2)/z.sp);
+        for(var ri=0;ri<nR;ri++){var cy=r.y+Math.round((z.sp/2+ri*z.sp)*SC);if(cy>r.y+r.h-2) break;
+          if(row.t==='r'){ctx.beginPath();ctx.moveTo(cx-pr,cy);ctx.lineTo(cx+pr,cy);ctx.lineTo(cx,cy+pr*2.2);ctx.closePath();ctx.fillStyle=col.i;ctx.fill();ctx.strokeStyle='#3a7018';ctx.lineWidth=.7;ctx.beginPath();ctx.moveTo(cx-1,cy);ctx.lineTo(cx-3,cy-pr*1.8);ctx.stroke();ctx.beginPath();ctx.moveTo(cx+1,cy);ctx.lineTo(cx+3,cy-pr*1.6);ctx.stroke();}
+          else if(row.t==='p'){ctx.beginPath();ctx.arc(cx,cy,pr,0,Math.PI*2);ctx.fillStyle=col.i+'cc';ctx.fill();ctx.strokeStyle='#639922aa';ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(cx,cy-pr);ctx.lineTo(cx,r.y+2);ctx.stroke();}
+          else if(row.t==='c'){ctx.beginPath();ctx.arc(cx,cy,pr,0,Math.PI*2);ctx.fillStyle=col.i+'bb';ctx.fill();}
+          else{ctx.beginPath();ctx.arc(cx,cy,pr,0,Math.PI*2);ctx.fillStyle=col.o+'88';ctx.fill();ctx.beginPath();ctx.arc(cx,cy,pr*.55,0,Math.PI*2);ctx.fillStyle=col.i+'ee';ctx.fill();}
+        }
+      });
+      if(z.id==='lettuce'){var lbs=['상추','버터헤드','상추'];z.rows.forEach(function(row,i){var rx=r.x+Math.round(row.o*SC);ctx.save();ctx.font='8px sans-serif';ctx.fillStyle=row.t==='b'?'#6a9e10':'#3B6D11';ctx.textAlign='center';ctx.translate(rx,r.y+r.h-4);ctx.rotate(-Math.PI/2);ctx.fillText(lbs[i],0,0);ctx.restore();});}
+    }
+    if(L.grid){ctx.font='500 10px sans-serif';ctx.fillStyle=z.tc;ctx.textAlign='left';ctx.fillText(z.name,r.x+3,r.y+12);if(z.tp>0){ctx.font='9px sans-serif';ctx.fillStyle=z.tc+'aa';ctx.fillText('총 '+z.tp+'포기',r.x+3,r.y+23);}}
+    if(S.mapSel===z.id){ctx.strokeStyle='#378ADD';ctx.lineWidth=2.5;ctx.setLineDash([]);ctx.strokeRect(r.x-2,r.y-2,r.w+4,r.h+4);}
+  });
+  if(L.dim){
+    ctx.font='9px sans-serif';ctx.setLineDash([]);
+    [P1X,P2X].forEach(function(px){aH(ctx,px,PAY-18,px+PW,'#185FA5');ctx.textAlign='center';ctx.fillStyle='#185FA5';ctx.fillText('80cm',px+PW/2,PAY-21);});
+    var yB=PAY+PH+28;[P1X,P2X].forEach(function(px){aH(ctx,px,yB,px+RW,'#3B6D11');ctx.textAlign='center';ctx.fillStyle='#3B6D11';ctx.fillText('두둑 60cm',px+RW/2,yB+10);aH(ctx,px+RW,yB,px+PW,'#5F5E5A');ctx.fillStyle='#5F5E5A';ctx.fillText('고랑 20cm',px+RW+GW/2,yB+10);});
+    aV(ctx,P1X-26,PAY,PAY+PH,'#185FA5');ctx.save();ctx.translate(P1X-36,PAY+PH/2);ctx.rotate(-Math.PI/2);ctx.textAlign='center';ctx.fillStyle='#185FA5';ctx.fillText('200cm',0,0);ctx.restore();
+    [1,2].forEach(function(plt){var xR=(plt===1?P1X:P2X)+PW+8;ZS.filter(function(z){return z.plot===plt;}).forEach(function(z){var y1=PAY+z.yFr*PH,y2=PAY+z.yTo*PH;aV(ctx,xR,y1,y2,'#888');ctx.fillStyle='#666';ctx.font='9px sans-serif';ctx.textAlign='left';ctx.fillText(Math.round((z.yTo-z.yFr)*200)+'cm',xR+4,(y1+y2)/2+3);});});
+  }
+  ctx.fillStyle='#185FA5';ctx.font='500 12px sans-serif';ctx.textAlign='center';ctx.fillText('구획 1',P1X+PW/2,PAY-12);ctx.fillText('구획 2',P2X+PW/2,PAY-12);
+  var mx2=(P1X+PW+P2X)/2;ctx.fillStyle='#aaa';ctx.font='10px sans-serif';ctx.fillText('통로',mx2,PAY+PH/2);ctx.fillText('40번',mx2,PAY+PH/2+14);
+}
+
+function drawSide(ctx){
+  var W=680,BW=118,BH=165,SY=55,GX=24,SX=22;
+  ctx.clearRect(0,0,W,560);
+  ctx.fillStyle='#185FA5';ctx.font='500 11px sans-serif';ctx.textAlign='center';ctx.fillText('두둑 단면 비교 (두둑 60cm + 고랑 20cm = 80cm)',W/2,22);
+  var zs=ZS.filter(function(z){return z.id!=='reserve';});
+  zs.forEach(function(z,i){
+    var bx=SX+i*(BW+GX),by=SY,rh=z.rh*2.5,soilH=76,rw=BW*.75,gw=BW*.25;
+    ctx.fillStyle='#c8a870';ctx.fillRect(bx,by+BH-rh-soilH,BW,soilH+rh+20);
+    if(z.id==='chive'){ctx.fillStyle=z.color;ctx.fillRect(bx,by+BH-rh-soilH,BW,soilH+rh);ctx.fillStyle='#7ab840';ctx.fillRect(bx,by+BH-rh,BW,rh);}
+    else{ctx.fillStyle=z.color;ctx.fillRect(bx,by+BH-rh-soilH,rw,soilH+rh);ctx.fillStyle='#B4B2A9';ctx.fillRect(bx+rw,by+BH-rh-soilH,gw,soilH+rh);ctx.fillStyle='#7ab840';ctx.fillRect(bx,by+BH-rh,rw,rh);}
+    if(z.id==='lettuce'){[{o:.17,t:'s'},{o:.5,t:'b'},{o:.83,t:'s'}].forEach(function(o){var col=pc(o.t),cx=bx+rw*o.o;ctx.beginPath();ctx.arc(cx,by+BH-rh-20,11,0,Math.PI*2);ctx.fillStyle=col.o+'77';ctx.fill();ctx.beginPath();ctx.arc(cx,by+BH-rh-20,6,0,Math.PI*2);ctx.fillStyle=col.i+'ee';ctx.fill();ctx.font='8px sans-serif';ctx.textAlign='center';ctx.fillStyle=o.t==='b'?'#6a9e10':'#27500A';ctx.fillText(o.t==='b'?'버터':'상추',cx,by+BH-rh-soilH-4);});}
+    else if(z.id==='carrot'){for(var ci=0;ci<6;ci++){var cx2=bx+5+ci*(rw-10)/5;ctx.beginPath();ctx.moveTo(cx2-3,by+BH-rh);ctx.lineTo(cx2+3,by+BH-rh);ctx.lineTo(cx2,by+BH-rh+26);ctx.closePath();ctx.fillStyle='#E8741C';ctx.fill();ctx.strokeStyle='#3a7018';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(cx2,by+BH-rh);ctx.lineTo(cx2-2,by+BH-rh-26);ctx.stroke();}}
+    else if(z.id==='pea'){[rw*.17,rw*.83].forEach(function(cx){ctx.strokeStyle='#8B7355';ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(bx+cx,by+BH-rh);ctx.lineTo(bx+cx,by+BH-rh-105);ctx.stroke();[32,62].forEach(function(dy){ctx.beginPath();ctx.arc(bx+cx,by+BH-rh-dy,4,0,Math.PI*2);ctx.fillStyle='#854F0Bcc';ctx.fill();});});ctx.strokeStyle='#88888855';ctx.lineWidth=.8;ctx.setLineDash([4,2]);ctx.beginPath();ctx.moveTo(bx+4,by+BH-rh-105);ctx.lineTo(bx+rw-4,by+BH-rh-105);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle='#412402';ctx.font='8px sans-serif';ctx.textAlign='center';ctx.fillText('지지대 1.2m',bx+rw/2,by+BH-rh-109);}
+    else if(z.id==='chive'){for(var ci2=0;ci2<8;ci2++){var cx3=bx+6+ci2*(BW-12)/7;ctx.strokeStyle='#085041cc';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(cx3,by+BH-rh);ctx.lineTo(cx3-1,by+BH-rh-44);ctx.stroke();}}
+    ctx.strokeStyle=z.sc;ctx.lineWidth=.8;ctx.setLineDash([]);ctx.strokeRect(bx,by+BH-rh-soilH,BW,soilH+rh);
+    if(z.id!=='chive'){ctx.strokeStyle='#88888855';ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(bx+rw,by+BH-rh-soilH);ctx.lineTo(bx+rw,by+BH+22);ctx.stroke();}
+    aV(ctx,bx-4,by+BH-rh,by+BH,'#3B6D11');ctx.fillStyle='#3B6D11';ctx.font='9px sans-serif';ctx.textAlign='right';ctx.fillText(z.rh+'cm',bx-7,by+BH-rh/2+3);
+    ctx.fillStyle=z.tc;ctx.font='500 10px sans-serif';ctx.textAlign='center';ctx.fillText(z.name,bx+BW/2,by+BH+13);ctx.fillStyle='#888';ctx.font='9px sans-serif';ctx.fillText('총 '+z.tp+'포기',bx+BW/2,by+BH+24);
+    if(z.id!=='chive'){ctx.fillStyle='#5a4a30';ctx.font='8px sans-serif';ctx.textAlign='center';ctx.fillText('두둑60',bx+rw/2,by+BH-rh-soilH-4);ctx.fillStyle='#5F5E5A';ctx.fillText('고랑20',bx+rw+gw/2,by+BH-rh-soilH-4);}
+    else{ctx.fillStyle='#5a4a30';ctx.font='8px sans-serif';ctx.textAlign='center';ctx.fillText('80cm 전체',bx+BW/2,by+BH-rh-soilH-4);}
+    if(S.mapSel===z.id){ctx.strokeStyle='#378ADD';ctx.lineWidth=2.5;ctx.setLineDash([]);ctx.strokeRect(bx-3,by+BH-rh-soilH-3,BW+6,soilH+rh+6);}
+  });
+}
+
+function drawExp(ctx){
+  var W=680;ctx.clearRect(0,0,W,560);
+  var cards=[
+    {x:28,y:16,w:298,h:248,color:'#dff0b8',sc:'#639922',tc:'#27500A',title:'[상추+버터헤드] 3줄 배치',lines:['두둑 60cm 안에 3줄 (줄간격 20cm)','  줄1 (10cm): 상추  5포기','  줄2 (30cm): 버터헤드 5포기','  줄3 (50cm): 상추  5포기','','포기 간격 = 20cm → 5포기/줄','총: 상추 10 + 버터헤드 5 = 15포기']},
+    {x:354,y:16,w:298,h:248,color:'#fdeac0',sc:'#BA7517',tc:'#633806',title:'[당근] 6줄 배치',lines:['두둑 60cm 안에 6줄 (줄간격 10cm)','  줄 위치: 5,15,25,35,45,55cm','','처음: 5cm 간격 줄뿌림','솎기 후: 포기 간격 10cm','6줄 × 10포기 = 총 60개','★ 10cm = 당근 표준 간격!']},
+    {x:28,y:290,w:298,h:248,color:'#faeeda',sc:'#854F0B',tc:'#412402',title:'[완두콩] 2줄 배치',lines:['두둑 60cm 안에 2줄','  줄1 (10cm): 6포기','  줄2 (50cm): 6포기  줄 간격 40cm','','포기 간격 = 15cm','총 12포기  ★ 지지대 1.2m 먼저!']},
+    {x:354,y:290,w:298,h:248,color:'#d0f0e4',sc:'#0F6E56',tc:'#085041',title:'[부추] 8줄 배치',lines:['두둑 80cm 전체 (고랑 없음)','줄 간격 10cm → 8줄','','포기 간격 = 10cm','60cm ÷ 10cm = 6포기/줄','8줄 × 6포기 = 총 48포기','★ 다년생 - 올해만이면 대파 추천']}
+  ];
+  cards.forEach(function(c){
+    ctx.fillStyle=c.color;ctx.strokeStyle=c.sc;ctx.lineWidth=.8;ctx.beginPath();ctx.roundRect(c.x,c.y,c.w,c.h,8);ctx.fill();ctx.stroke();
+    ctx.fillStyle=c.tc;ctx.font='500 11px sans-serif';ctx.textAlign='left';ctx.fillText(c.title,c.x+12,c.y+18);
+    ctx.font='10px sans-serif';c.lines.forEach(function(l,i){if(!l) return;ctx.fillStyle=(l[0]==='★'||l.includes('총')||l.includes('→'))?c.sc:c.tc+'bb';ctx.fillText(l,c.x+12,c.y+34+i*19);});
+  });
+  ctx.fillStyle='#888';ctx.font='10px sans-serif';ctx.textAlign='center';ctx.fillText('줄 = 두둑 가로(폭) 방향  |  포기 간격 = 두둑 세로(길이) 방향',W/2,550);
+}
+
+document.getElementById('mapC').addEventListener('click',function(e){
+  if(S.mapV!=='top') return;
+  var rc=this.getBoundingClientRect(),sx=this.width/rc.width,sy=this.height/rc.height;
+  var mx=(e.clientX-rc.left)*sx,my=(e.clientY-rc.top)*sy;
+  var hit=null;
+  ZS.forEach(function(z){var r=zR(z);if(mx>=r.x&&mx<=r.x+r.w&&my>=r.y&&my<=r.y+r.h) hit=z;});
+  if(hit&&hit.id!==S.mapSel){S.mapSel=hit.id;selMapZone(hit);}
+  else{S.mapSel=null;clearMapDet();}
+  drawMap();
+});
+function selMapZone(z){
+  document.getElementById('mi-z').textContent=z.name;
+  document.getElementById('mi-r').textContent=z.id==='lettuce'?'상추줄1+3/버터헤드줄2':z.rows.length?z.rows.length+'줄':'미정';
+  document.getElementById('mi-s').textContent=z.sp?z.sp+'cm':'미정';
+  document.getElementById('mi-c').textContent=z.tp?z.tp+'포기':'미정';
+  var rows=Object.entries(z.info).map(function(e){return '<div class="mdr"><span style="color:var(--text-l)">'+e[0]+'</span><span style="font-weight:600">'+e[1]+'</span></div>';}).join('');
+  document.getElementById('map-det').innerHTML='<div class="mdt">'+z.name+'</div>'+rows+'<div class="mtp">💡 '+z.tip+'</div>';
+}
+function clearMapDet(){
+  document.getElementById('mi-z').textContent='클릭해서 선택';
+  ['mi-r','mi-s','mi-c'].forEach(function(id){document.getElementById(id).textContent='—';});
+  document.getElementById('map-det').innerHTML='<div class="mdt">구역을 클릭하면 상세 정보가 표시돼요 👆</div>';
+}
+
+/* ═══════════ 계획표 ═══════════ */
+var MC={'03':'#2e7d32','04':'#1565c0','05':'#e65100','06':'#6a1b9a','07':'#4e342e','all':'#2d5a18'};
+var MN={'2026-03':'3월 (지금!)','2026-04':'4월','2026-05':'5월','2026-06':'6월','2026-07':'7~8월'};
+var BC={u:'tb-u',n:'tb-n',h:'tb-h',p:'tb-p'};
+
+function setMonthFilter(m){
+  S.tf=m;
+  document.querySelectorAll('.mfb').forEach(function(b){b.classList.remove('on');b.style.background='';b.style.color='';b.style.borderColor='';});
+  var btn=document.getElementById('mfb-'+m);
+  btn.classList.add('on');btn.style.background=MC[m]||'#2d5a18';btn.style.color='#fff';btn.style.borderColor='transparent';
+  renderTasks();
+}
+
+function renderTasks(){
+  var fl=S.tf==="all"?TASKS_ALL():TASKS_ALL().filter(function(t){return t.m===S.tf;});
+  var grp={};
+  fl.forEach(function(t){var k="2026-"+t.m;if(!grp[k]) grp[k]=[];grp[k].push(t);});
+  var mN={"2026-03":"3월","2026-04":"4월","2026-05":"5월","2026-06":"6월","2026-07":"7~8월"};
+  var out=[];
+  Object.keys(grp).sort().forEach(function(k){
+    out.push('<div class="ts"><div class="tst">'+(mN[k]||k)+'</div><div class="tl">');
+    grp[k].forEach(function(t){
+      var dn=S.done.has(t.id);
+      var bc=CC[t.c]||"#888";
+      var bdg="";
+      if(t.big) bdg+='<span class="tbg" style="background:#fff8e1;color:#b8860b">'+t.bt+"</span>";
+      else if(t.bt) bdg+='<span class="tbg" style="background:#e8f5e9;color:#2e7d32">'+t.bt+"</span>";
+      var div=document.createElement("div");
+      div.className="ti"+(dn?" done":"");
+      div.style.borderLeft="3px solid "+bc;
+      div.setAttribute("data-tid",t.id);
+      div.innerHTML=[
+        '<div class="task-click-area" data-tid="'+t.id+'">',
+        '<div class="td" style="background:'+(dn?"#ccc":bc)+'"></div>',
+        '<div class="tb2">',
+        '<div class="tdate">'+t.date.slice(5).replace("-","/")+" "+t.e+bdg+"</div>",
+        '<div class="tname'+(dn?" done":"")+'">'+t.n+"</div>",
+        '<div class="tdesc">'+t.d+"</div>",
+        "</div></div>",
+        '<div class="task-actions">',
+        '<button class="btn-tedit" data-tid="'+t.id+'">✏️ 수정</button>',
+        '<button class="btn-tdel" data-tid="'+t.id+'">🗑️ 삭제</button>',
+        "</div>"
+      ].join("");
+      out.push(div.outerHTML);
+    });
+    out.push("</div></div>");
+  });
+  var wrap=document.getElementById("task-wrap");
+  wrap.innerHTML=out.join("");
+  wrap.addEventListener("click",taskClickHandler,{once:true});
+  wrap.addEventListener("click",taskClickHandler);
+  updStats();
+}
+function taskClickHandler(e){
+  var editBtn=e.target.closest(".btn-tedit");
+  var delBtn=e.target.closest(".btn-tdel");
+  var area=e.target.closest(".task-click-area");
+  if(editBtn){editTask(editBtn.dataset.tid);return;}
+  if(delBtn){delTask(delBtn.dataset.tid);return;}
+  if(area){togTask(area.dataset.tid);return;}
+}
+
+function togTask(id){
+  if(S.done.has(id)) S.done.delete(id); else S.done.add(id);
+  localStorage.setItem('gDone',JSON.stringify(Array.from(S.done)));
+  renderTasks();
+}
+
+function editTask(id){
+  var all=TASKS_ALL();
+  var t=all.find(function(x){return x.id===id;});
+  if(!t) return;
+  var nd=prompt("날짜 (YYYY-MM-DD):",t.date); if(!nd) return;
+  var nm=prompt("할 일 이름:",t.n); if(!nm) return;
+  var desc=prompt("설명:",t.d)||"";
+  var isBig=confirm("대작업(주말)인가요? 확인=주말 / 취소=평일");
+  t.date=nd; t.n=nm; t.d=desc; t.m=nd.slice(5,7); t.big=isBig; t.bt=isBig?"🏠주말":"💧평일";
+  var ci=CUSTOM_TASKS.findIndex(function(x){return x.id===id;});
+  if(ci>=0){CUSTOM_TASKS[ci]=t;}
+  else{var bi=TASKS.findIndex(function(x){return x.id===id;});if(bi>=0) TASKS[bi]=t;}
+  localStorage.setItem("gCustomTasks",JSON.stringify(CUSTOM_TASKS));
+  renderTasks(); showToast("✅ 수정됐어요!");
+}
+function delTask(id){
+  if(!confirm("이 할 일을 삭제할까요?")) return;
+  var ci=CUSTOM_TASKS.findIndex(function(x){return x.id===id;});
+  if(ci>=0) CUSTOM_TASKS.splice(ci,1);
+  else{var bi=TASKS.findIndex(function(x){return x.id===id;});if(bi>=0) TASKS.splice(bi,1);}
+  S.done.delete(id);
+  localStorage.setItem("gCustomTasks",JSON.stringify(CUSTOM_TASKS));
+  localStorage.setItem("gDone",JSON.stringify(Array.from(S.done)));
+  renderTasks(); showToast("🗑️ 삭제됐어요!");
+}
+function addTask(){
+  var nd=prompt("날짜 (YYYY-MM-DD):","2026-04-05"); if(!nd) return;
+  var nm=prompt("할 일 이름:"); if(!nm) return;
+  var desc=prompt("설명 (선택):")||"";
+  var isBig=confirm("대작업(주말)인가요?");
+  var t={id:"tc"+Date.now(),date:nd,m:nd.slice(5,7),e:"📌",n:nm,d:desc,
+         b:"",bt:isBig?"🏠주말":"💧평일",c:"관리",big:isBig};
+  CUSTOM_TASKS.push(t);
+  localStorage.setItem("gCustomTasks",JSON.stringify(CUSTOM_TASKS));
+  renderTasks(); showToast("✅ 추가됐어요!");
+}
+function updStats(){
+  var t=TASKS.length,d=S.done.size,pct=Math.round(d/t*100);
+  document.getElementById('st-t').textContent=t;
+  document.getElementById('st-d').textContent=d;
+  document.getElementById('st-l').textContent=t-d;
+  document.getElementById('pf').style.width=pct+'%';
+  document.getElementById('pp').textContent=pct+'%';
+}
+
+
+/* ═══ 일지 이벤트 초기화 ═══ */
+function initJournalEvents(){
+  /* 날씨 */
+  document.getElementById("wx-btns").addEventListener("click",function(e){
+    var btn=e.target.closest("[data-val]");
+    if(!btn||!btn.classList.contains("wx")) return;
+    document.querySelectorAll(".wx").forEach(function(b){b.classList.remove("on");});
+    btn.classList.add("on"); S.jW=btn.dataset.val;
+  });
+  /* 물주기 */
+  document.getElementById("wt-btns").addEventListener("click",function(e){
+    var btn=e.target.closest("[data-val]");
+    if(!btn||!btn.classList.contains("wt")) return;
+    document.querySelectorAll(".wt").forEach(function(b){b.classList.remove("on");});
+    btn.classList.add("on"); S.jWt=btn.dataset.val;
+  });
+  /* 오늘 한 일 */
+  document.getElementById("act-list").addEventListener("click",function(e){
+    var addBtn=e.target.closest("#act-add-btn");
+    if(addBtn){
+      document.getElementById("act-add-row").style.display="flex";
+      document.getElementById("act-inp").focus();
+      return;
+    }
+    var okBtn=e.target.closest("[data-action=confirm-act]");
+    if(okBtn){ addCustomAct(); return; }
+    var cancelBtn=e.target.closest("[data-action=cancel-act]");
+    if(cancelBtn){
+      document.getElementById("act-add-row").style.display="none";
+      document.getElementById("act-inp").value="";
+      return;
+    }
+    var actBtn=e.target.closest("button.act");
+    if(actBtn) actBtn.classList.toggle("on");
+  });
+  /* 작물 탭 */
+  document.getElementById("crop-tabs").addEventListener("click",function(e){
+    var btn=e.target.closest(".ct");
+    if(!btn||!btn.dataset.cid) return;
+    var cid=btn.dataset.cid;
+    document.querySelectorAll(".ct").forEach(function(b){
+      b.classList.remove("on"); b.style.background=""; b.style.borderColor=""; b.style.color="";
+    });
+    btn.classList.add("on");
+    var cc={"lettuce":"#3B6D11","chive":"#085041","carrot":"#BA7517","pea":"#854F0B","reserve":"#e65100"};
+    btn.style.background=cc[cid]||"#888"; btn.style.borderColor=cc[cid]||"#888"; btn.style.color="#fff";
+    document.querySelectorAll(".cp").forEach(function(p){p.classList.remove("show");});
+    var cp=document.getElementById("cp-"+cid);
+    if(cp) cp.classList.add("show");
+  });
+  /* 작물 상태 체크박스 + 직접 추가 */
+  document.querySelectorAll(".csl").forEach(function(csl){
+    csl.addEventListener("change",function(e){
+      if(e.target.type==="checkbox"){
+        var lbl=e.target.closest("label");
+        if(lbl) lbl.classList.toggle("on",e.target.checked);
+      }
+    });
+    csl.addEventListener("click",function(e){
+      var showBtn=e.target.closest("[data-action=add-status]");
+      if(showBtn){
+        var cid=showBtn.dataset.cid;
+        var row=document.getElementById("si-"+cid);
+        if(row){ row.style.display="flex"; var inp=row.querySelector("input"); if(inp) inp.focus(); }
+        return;
+      }
+      var okBtn=e.target.closest("[data-action=confirm-status]");
+      if(okBtn){ addCustomStatus(okBtn.dataset.cid); return; }
+      var cancelBtn=e.target.closest("[data-action=cancel-status]");
+      if(cancelBtn){
+        var cid=cancelBtn.dataset.cid;
+        var row=document.getElementById("si-"+cid);
+        if(row){ row.style.display="none"; var inp=row.querySelector("input"); if(inp) inp.value=""; }
+        return;
+      }
+    });
+  });
+  /* 기록 보기 필터 */
+  var lf=document.getElementById("log-filter-btns");
+  if(lf) lf.addEventListener("click",function(e){
+    var btn=e.target.closest(".lfb");
+    if(!btn||!btn.dataset.lf) return;
+    document.querySelectorAll(".lfb").forEach(function(b){b.classList.remove("on");});
+    btn.classList.add("on"); S.lf=btn.dataset.lf; renderLogs();
+  });
+  /* 일지 탭 */
+  document.querySelector(".jnav").addEventListener("click",function(e){
+    var btn=e.target.closest("[data-jp]");
+    if(!btn) return;
+    showJP(btn.dataset.jp);
+  });
+  /* 저장 버튼 */
+  document.getElementById("save-btn").addEventListener("click",saveLog);
+  /* 사진 드롭존 */
+  document.getElementById("photo-drop").addEventListener("click",function(){
+    document.getElementById("j-pf").click();
+  });
+  document.getElementById("j-pf").addEventListener("change",function(){ handlePhotos(this); });
+  /* 계획표 + 할 일 추가 */
+  var addTaskBtn=document.getElementById("add-task-btn");
+  if(addTaskBtn) addTaskBtn.addEventListener("click",addTask);
+}
+
+/* ═══ 커스텀 항목 ═══ */
+function addCustomAct(){
+  var v=document.getElementById("act-inp").value.trim();
+  if(!v) return;
+  var list=document.getElementById("act-list");
+  var btn=document.createElement("button");
+  btn.className="jb act on"; btn.textContent=v;
+  list.insertBefore(btn, document.getElementById("act-add-btn"));
+  if(!S.customActs.includes(v)){
+    S.customActs.push(v);
+    localStorage.setItem("gCustomActs",JSON.stringify(S.customActs));
+  }
+  document.getElementById("act-add-row").style.display="none";
+  document.getElementById("act-inp").value="";
+}
+function addCustomStatus(cid){
+  var inp=document.getElementById("sii-"+cid);
+  if(!inp) return;
+  var v=inp.value.trim();
+  if(!v) return;
+  var csl=document.getElementById("csl-"+cid);
+  var lbl=document.createElement("label");
+  lbl.className="csl-item on";
+  var cb=document.createElement("input"); cb.type="checkbox"; cb.value=v; cb.checked=true;
+  lbl.appendChild(cb); lbl.appendChild(document.createTextNode(" "+v));
+  var addBtn=csl.querySelector("[data-action=add-status]");
+  csl.insertBefore(lbl, addBtn);
+  if(!S.customStatuses[cid]) S.customStatuses[cid]=[];
+  if(!S.customStatuses[cid].includes(v)){
+    S.customStatuses[cid].push(v);
+    localStorage.setItem("gCustomStatuses",JSON.stringify(S.customStatuses));
+  }
+  var row=document.getElementById("si-"+cid);
+  if(row){ row.style.display="none"; inp.value=""; }
+}
+
+/* ═══ 사진 ═══ */
+function handlePhotos(input){
+  var files=Array.from(input.files);
+  var preview=document.getElementById("photo-preview");
+  files.forEach(function(file){
+    if(!file.type.startsWith("image/")) return;
+    var reader=new FileReader();
+    reader.onload=function(e){
+      var url=e.target.result;
+      var idx=S.photos.push(url)-1;
+      var thumb=document.createElement("div"); thumb.className="photo-thumb";
+      var img=document.createElement("img"); img.src=url;
+      var del=document.createElement("button"); del.className="del-photo"; del.textContent="×";
+      del.addEventListener("click",(function(i,t){return function(){S.photos.splice(i,1);t.remove();};})(idx,thumb));
+      thumb.appendChild(img); thumb.appendChild(del); preview.appendChild(thumb);
+    };
+    reader.readAsDataURL(file);
+  });
+  input.value="";
+}
+
+/* ═══ 저장 ═══ */
+function saveLog(){
+  var date=document.getElementById("j-date").value;
+  if(!date){showToast("날짜를 선택해주세요!");return;}
+  var acts=[];
+  document.querySelectorAll("#act-list .act.on").forEach(function(b){acts.push(b.textContent.trim());});
+  var crops={};
+  var CS={"lettuce":"l","chive":"c","carrot":"r","pea":"p","reserve":"v"};
+  Object.keys(CS).forEach(function(cid){
+    var ci=CS[cid];
+    var h=document.getElementById("c-"+ci+"-h"); h=h?h.value:"";
+    var n=document.getElementById("c-"+ci+"-n"); n=n?n.value:"";
+    var n2=document.getElementById("c-"+ci+"-n2"); n2=n2?n2.value:"";
+    var sts=[];
+    document.querySelectorAll("#csl-"+cid+" input[type=checkbox]:checked").forEach(function(cb){sts.push(cb.value);});
+    if(h||n||n2||sts.length) crops[cid]={h:h,statuses:sts,n:n,n2:n2};
+  });
+  var id=S.editingId||("lg"+Date.now());
+  var log={id:id,date:date,vis:document.getElementById("j-vis").value,
+    wx:S.jW,tmp:document.getElementById("j-tmp").value,tlo:document.getElementById("j-tlo").value,
+    wt:S.jWt,acts:acts,crops:crops,photos:S.photos.slice(),
+    pn:document.getElementById("j-pn").value,
+    ov:document.getElementById("j-ov").value};
+  if(S.editingId){
+    var idx=S.logs.findIndex(function(l){return l.id===S.editingId;});
+    if(idx>=0) S.logs[idx]=log; else S.logs.unshift(log);
+    S.editingId=null;
+    document.getElementById("save-btn").textContent="💾 일지 저장하기";
+    document.getElementById("edit-notice-wrap").innerHTML="";
+  } else {
+    S.logs.unshift(log);
+  }
+  localStorage.setItem("gLogs",JSON.stringify(S.logs));
+  clrJForm(); updJCnt(); showToast("✅ 일지가 저장됐어요!");
+}
+function clrJForm(){
+  document.querySelectorAll(".jb.wx,.jb.wt").forEach(function(b){b.classList.remove("on");});
+  document.querySelectorAll("#act-list .act").forEach(function(b){b.classList.remove("on");});
+  S.jW=""; S.jWt=""; S.photos=[];
+  var CS={"lettuce":"l","chive":"c","carrot":"r","pea":"p","reserve":"v"};
+  Object.keys(CS).forEach(function(cid){
+    var ci=CS[cid];
+    ["c-"+ci+"-h","c-"+ci+"-n","c-"+ci+"-n2"].forEach(function(id){var el=document.getElementById(id);if(el)el.value="";});
+    document.querySelectorAll("#csl-"+cid+" input[type=checkbox]").forEach(function(cb){
+      cb.checked=false; var l=cb.closest("label"); if(l) l.classList.remove("on");
+    });
+  });
+  ["j-pn","j-ov","j-tmp","j-tlo"].forEach(function(id){var el=document.getElementById(id);if(el)el.value="";});
+  var prev=document.getElementById("photo-preview"); if(prev) prev.innerHTML="";
+  var pf=document.getElementById("j-pf"); if(pf) pf.value="";
+}
+
+/* ═══ 일지 탭 ═══ */
+function showJP(p){
+  document.querySelectorAll(".jp").forEach(function(el){el.classList.remove("show");});
+  document.querySelectorAll(".jnb").forEach(function(el){el.classList.remove("on");});
+  var panel=document.getElementById("jp-"+p);
+  if(panel) panel.classList.add("show");
+  var btn=document.querySelector(".jnb[data-jp="+p+"]");
+  if(btn) btn.classList.add("on");
+  if(p==="list") renderLogs();
+  if(p==="growth") updGrowth();
+}
+
+/* ═══ 기록 목록 ═══ */
+function renderLogs(){
+  var fl=S.lf==="all"?S.logs:S.logs.filter(function(l){
+    if(S.lf==="harvest") return l.acts&&l.acts.some(function(a){return a.indexOf("수확")>=0;});
+    return l.crops&&l.crops[S.lf];
+  });
+  var el=document.getElementById("log-list");
+  if(!fl.length){
+    el.innerHTML='<div class="emp"><div class="ei">📔</div>아직 기록이 없어요<br>첫 일지를 써봐요!</div>';
+    return;
+  }
+  var frags=[];
+  fl.forEach(function(l){
+    var ab="";
+    if(l.acts&&l.acts.length) l.acts.forEach(function(a){ab+='<span class="lbg" style="background:#fff3e0;color:#e65100">'+a+"</span>";});
+    var chips="";
+    if(l.crops) Object.keys(l.crops).forEach(function(c){
+      var cr=l.crops[c];
+      var sts=cr.statuses&&cr.statuses.length?cr.statuses.join(" · "):(cr.s||"");
+      var col=CC[c]||"#888";
+      chips+='<span class="cch" style="background:'+col+'22;color:'+col+'">'+(CN[c]||c)+(sts?" · "+sts:"")+"</span>";
+    });
+    var sm="";
+    if(l.wx) sm+=l.wx+" ";
+    if(l.tmp) sm+=l.tmp+"°C ";
+    if(l.wt) sm+="· "+l.wt+" ";
+    if(l.ov) sm+="· "+l.ov.slice(0,40)+(l.ov.length>40?"…":"");
+    var thumbs="";
+    if(l.photos&&l.photos.length){
+      thumbs='<div style="display:flex;gap:4px;flex-wrap:wrap;margin-top:6px">';
+      l.photos.slice(0,4).forEach(function(p){thumbs+='<img src="'+p+'" style="width:48px;height:48px;object-fit:cover;border-radius:5px;">';});
+      if(l.photos.length>4) thumbs+='<span style="font-size:11px;color:#888;align-self:center">+'+(l.photos.length-4)+"장</span>";
+      thumbs+="</div>";
+    }
+    var card=document.createElement("div");
+    card.className="lc"; card.dataset.lid=l.id;
+    card.innerHTML=[
+      '<div class="log-top-row" data-lid="'+l.id+'">',
+      '<div class="ldt">'+l.date+" "+l.vis+"</div>",
+      '<div class="lbs2">'+ab+"</div></div>",
+      '<div class="lsm">'+sm+"</div>",
+      chips?'<div class="lcr">'+chips+"</div>":"",
+      thumbs,
+      '<div class="log-actions">',
+      '<button class="btn-edit" data-lid="'+l.id+'">✏️ 수정</button>',
+      '<button class="btn-del" data-lid="'+l.id+'">🗑️ 삭제</button>',
+      "</div>"
+    ].join("");
+    frags.push(card.outerHTML);
+  });
+  el.innerHTML=frags.join("");
+  el.addEventListener("click",logClickHandler,{once:true});
+  el.addEventListener("click",logClickHandler);
+}
+function logClickHandler(e){
+  var eb=e.target.closest(".btn-edit");
+  var db=e.target.closest(".btn-del");
+  var tr=e.target.closest(".log-top-row");
+  if(eb){editLog(eb.dataset.lid);return;}
+  if(db){delLog(db.dataset.lid);return;}
+  if(tr){showLogDet(tr.dataset.lid);return;}
+}
+
+/* ═══ 상세 ═══ */
+function showLogDet(id){
+  var l=S.logs.find(function(x){return x.id===id;});
+  if(!l) return;
+  var rows="";
+  if(l.wx) rows+='<div class="mor"><span class="mork">날씨</span><span class="morv">'+l.wx+(l.tmp?" / "+l.tmp+"°C":"")+(l.tlo?" (최저 "+l.tlo+"°C)":"")+"</span></div>";
+  if(l.wt) rows+='<div class="mor"><span class="mork">물주기</span><span class="morv">'+l.wt+"</span></div>";
+  if(l.acts&&l.acts.length) rows+='<div class="mor"><span class="mork">활동</span><span class="morv">'+l.acts.join(", ")+"</span></div>";
+  if(l.crops) Object.keys(l.crops).forEach(function(c){
+    var cr=l.crops[c];
+    var sts=cr.statuses&&cr.statuses.length?cr.statuses.join(", "):(cr.s||"");
+    rows+='<div class="mor"><span class="mork">'+(CN[c]||c)+'</span><span class="morv">'+(cr.h?cr.h+"cm ":"")+sts+"</span></div>";
+    if(cr.n2) rows+='<div class="mor"><span class="mork">추가메모</span><span class="morv">'+cr.n2+"</span></div>";
+    if(cr.n) rows+='<div class="mor"><span class="mork">상세메모</span><span class="morv">'+cr.n+"</span></div>";
+  });
+  if(l.photos&&l.photos.length){
+    rows+='<div style="margin-top:8px"><div style="font-size:12px;color:#888;margin-bottom:5px">📷 사진 '+l.photos.length+"장</div>";
+    rows+='<div style="display:flex;flex-wrap:wrap;gap:5px">';
+    l.photos.forEach(function(p){rows+='<img src="'+p+'" style="width:72px;height:72px;object-fit:cover;border-radius:6px;">';});
+    rows+="</div></div>";
+  }
+  if(l.pn) rows+='<div class="mor"><span class="mork">📷메모</span><span class="morv">'+l.pn+"</span></div>";
+  if(l.ov) rows+='<div style="margin-top:8px;padding:8px;background:#f5f3ee;border-radius:6px;font-size:13px">💬 '+l.ov+"</div>";
+  document.getElementById("mot").textContent=l.date+" "+l.vis;
+  document.getElementById("mob").innerHTML=rows;
+  document.getElementById("modal").classList.add("show");
+}
+
+/* ═══ 수정 / 삭제 ═══ */
+function editLog(id){
+  var l=S.logs.find(function(x){return x.id===id;});
+  if(!l) return;
+  showPage("journal");
+  showJP("write");
+  S.editingId=id; S.photos=l.photos?l.photos.slice():[];
+  var prev=document.getElementById("photo-preview"); prev.innerHTML="";
+  S.photos.forEach(function(p,i){
+    var thumb=document.createElement("div"); thumb.className="photo-thumb";
+    var img=document.createElement("img"); img.src=p;
+    var del=document.createElement("button"); del.className="del-photo"; del.textContent="×";
+    del.addEventListener("click",(function(idx,t){return function(){S.photos.splice(idx,1);t.remove();};})(i,thumb));
+    thumb.appendChild(img); thumb.appendChild(del); prev.appendChild(thumb);
+  });
+  document.getElementById("j-date").value=l.date;
+  var vis=document.getElementById("j-vis");
+  for(var i=0;i<vis.options.length;i++) if(vis.options[i].text===l.vis){vis.selectedIndex=i;break;}
+  if(l.wx) document.querySelectorAll(".wx").forEach(function(b){if(b.dataset.val===l.wx){b.classList.add("on");S.jW=l.wx;}});
+  if(l.tmp) document.getElementById("j-tmp").value=l.tmp;
+  if(l.tlo) document.getElementById("j-tlo").value=l.tlo;
+  if(l.wt) document.querySelectorAll(".wt").forEach(function(b){if(b.dataset.val===l.wt){b.classList.add("on");S.jWt=l.wt;}});
+  if(l.acts) l.acts.forEach(function(a){document.querySelectorAll("#act-list .act").forEach(function(b){if(b.textContent.trim()===a)b.classList.add("on");});});
+  var CS={"lettuce":"l","chive":"c","carrot":"r","pea":"p","reserve":"v"};
+  if(l.crops) Object.keys(l.crops).forEach(function(c){
+    var cr=l.crops[c],ci=CS[c]; if(!ci) return;
+    var hEl=document.getElementById("c-"+ci+"-h"); if(hEl&&cr.h) hEl.value=cr.h;
+    var nEl=document.getElementById("c-"+ci+"-n"); if(nEl&&cr.n) nEl.value=cr.n;
+    var n2El=document.getElementById("c-"+ci+"-n2"); if(n2El&&cr.n2) n2El.value=cr.n2;
+    var sts=cr.statuses||[];
+    document.querySelectorAll("#csl-"+c+" input[type=checkbox]").forEach(function(cb){
+      if(sts.indexOf(cb.value)>=0){cb.checked=true;var lbl=cb.closest("label");if(lbl)lbl.classList.add("on");}
+    });
+  });
+  if(l.pn) document.getElementById("j-pn").value=l.pn;
+  if(l.ov) document.getElementById("j-ov").value=l.ov;
+  document.getElementById("save-btn").textContent="✏️ 수정 저장하기";
+  document.getElementById("edit-notice-wrap").innerHTML='<div class="edit-notice">✏️ <strong>'+l.date+"</strong> 일지 수정 중 — 저장하면 기존 내용이 덮어씌워져요.</div>";
+  window.scrollTo({top:0,behavior:"smooth"});
+  showToast("✏️ 수정 모드입니다");
+}
+function delLog(id){
+  if(!confirm("이 일지를 삭제할까요?")) return;
+  S.logs=S.logs.filter(function(l){return l.id!==id;});
+  localStorage.setItem("gLogs",JSON.stringify(S.logs));
+  updJCnt(); renderLogs(); updGrowth();
+  showToast("🗑️ 삭제됐어요");
+}
+
+/* ═══ 생육 현황 ═══ */
+function updGrowth(){
+  var ks={lettuce:{pre:"gcv-l",bar:"gcb-l",st:"gcs-l",max:30},chive:{pre:"gcv-c",bar:"gcb-c",st:"gcs-c",max:25},carrot:{pre:"gcv-r",bar:"gcb-r",st:"gcs-r",max:15},pea:{pre:"gcv-p",bar:"gcb-p",st:"gcs-p",max:120}};
+  Object.keys(ks).forEach(function(c){
+    var k=ks[c];
+    var cl=S.logs.filter(function(l){return l.crops&&l.crops[c];});
+    document.getElementById(k.pre+"c").textContent=cl.length+"회";
+    if(!cl.length) return;
+    var lat=cl[0],cr=lat.crops[c];
+    document.getElementById(k.pre+"d").textContent=lat.date.slice(5).replace("-","/");
+    if(cr.h){document.getElementById(k.pre+"h").textContent=cr.h+"cm";document.getElementById(k.bar).style.width=Math.min(100,Math.round(cr.h/k.max*100))+"%";}
+    var st=cr.statuses&&cr.statuses.length?cr.statuses[0]:(cr.s||"");
+    if(st) document.getElementById(k.st).textContent=st;
+    var al=S.logs.filter(function(l){return l.crops&&l.crops[c]&&l.acts&&l.acts.length;});
+    if(al.length) document.getElementById(k.pre+"a").textContent=al[0].acts.slice(-1)[0];
+  });
+}
+function updJCnt(){var el=document.getElementById("j-cnt");if(el)el.textContent="기록 "+S.logs.length+"건 · 2026년 봄";}
+
+/* ═══ 모달 ═══ */
+function closeModal(){document.getElementById("modal").classList.remove("show");}
+
+/* ═══ 유틸 ═══ */
+
+/* ═══ 데이터 백업/복원 ═══ */
+function exportData(){
+  var data={
+    version:1,
+    exportedAt:new Date().toISOString(),
+    done:Array.from(S.done),
+    logs:S.logs,
+    customTasks:CUSTOM_TASKS,
+    customActs:S.customActs,
+    customStatuses:S.customStatuses
+  };
+  var blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  var today=new Date().toISOString().slice(0,10);
+  a.href=url; a.download='사랑싹텃밭_백업_'+today+'.json';
+  document.body.appendChild(a); a.click();
+  document.body.removeChild(a); URL.revokeObjectURL(url);
+  showToast('✅ 백업 파일이 저장됐어요!');
+}
+function importData(){
+  var inp=document.createElement('input');
+  inp.type='file'; inp.accept='.json,application/json';
+  inp.addEventListener('change',function(){
+    if(!inp.files||!inp.files[0]) return;
+    var reader=new FileReader();
+    reader.onload=function(e){
+      try{
+        var data=JSON.parse(e.target.result);
+        if(!data.version){showToast('❌ 올바른 백업 파일이 아니에요');return;}
+        if(!confirm('현재 데이터를 불러온 파일로 교체할까요?\n(현재 데이터는 사라져요)')) return;
+        if(data.done) S.done=new Set(data.done);
+        if(data.logs) S.logs=data.logs;
+        if(data.customTasks){CUSTOM_TASKS.length=0;data.customTasks.forEach(function(t){CUSTOM_TASKS.push(t);});}
+        if(data.customActs) S.customActs=data.customActs;
+        if(data.customStatuses) S.customStatuses=data.customStatuses;
+        localStorage.setItem('gDone',JSON.stringify(Array.from(S.done)));
+        localStorage.setItem('gLogs',JSON.stringify(S.logs));
+        localStorage.setItem('gCustomTasks',JSON.stringify(CUSTOM_TASKS));
+        localStorage.setItem('gCustomActs',JSON.stringify(S.customActs));
+        localStorage.setItem('gCustomStatuses',JSON.stringify(S.customStatuses));
+        renderTasks(); updJCnt(); updStats();
+        var dt=data.exportedAt?data.exportedAt.slice(0,16).replace('T',' '):'알 수 없음';
+        showToast('✅ 복원 완료! (백업 시각: '+dt+')');
+      }catch(err){showToast('❌ 파일을 읽을 수 없어요: '+err.message);}
+    };
+    reader.readAsText(inp.files[0]);
+  });
+  inp.click();
+}
+
+function showToast(msg){
+  var t=document.getElementById("toast");
+  t.textContent=msg; t.classList.add("show");
+  setTimeout(function(){t.classList.remove("show");},2300);
+}
+
+/* ═══ 초기화 ═══ */
+window.addEventListener("load",function(){
+  drawMap();
+  renderTasks();
+  updJCnt();
+  updStats();
+  initJournalEvents();
+  /* 커스텀 활동 복원 */
+  if(S.customActs.length){
+    var list=document.getElementById("act-list");
+    S.customActs.forEach(function(a){
+      var btn=document.createElement("button");
+      btn.className="jb act"; btn.textContent=a;
+      list.insertBefore(btn,document.getElementById("act-add-btn"));
+    });
+  }
+  /* 커스텀 상태 복원 */
+  Object.keys(S.customStatuses).forEach(function(cid){
+    var csl=document.getElementById("csl-"+cid); if(!csl) return;
+    S.customStatuses[cid].forEach(function(v){
+      var lbl=document.createElement("label"); lbl.className="csl-item";
+      var cb=document.createElement("input"); cb.type="checkbox"; cb.value=v;
+      lbl.appendChild(cb); lbl.appendChild(document.createTextNode(" "+v));
+      var addBtn=csl.querySelector("[data-action=add-status]");
+      csl.insertBefore(lbl, addBtn);
+    });
+  });
+  /* 커스텀 태스크 복원 완료 */
+});
+
+</script>
+</body>
+</html>
