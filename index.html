@@ -981,7 +981,23 @@ function addCustomStatus(cid){
   if(row){ row.style.display="none"; inp.value=""; }
 }
 
-/* ═══ 사진 ═══ */
+/* ═══ 사진 (압축 저장) ═══ */
+function compressImage(dataUrl, callback){
+  var img=new Image();
+  img.onload=function(){
+    var MAX=800;
+    var w=img.width, h=img.height;
+    if(w>MAX||h>MAX){
+      if(w>h){h=Math.round(h*MAX/w);w=MAX;}
+      else{w=Math.round(w*MAX/h);h=MAX;}
+    }
+    var canvas=document.createElement("canvas");
+    canvas.width=w; canvas.height=h;
+    canvas.getContext("2d").drawImage(img,0,0,w,h);
+    callback(canvas.toDataURL("image/jpeg",0.65));
+  };
+  img.src=dataUrl;
+}
 function handlePhotos(input){
   var files=Array.from(input.files);
   var preview=document.getElementById("photo-preview");
@@ -989,13 +1005,14 @@ function handlePhotos(input){
     if(!file.type.startsWith("image/")) return;
     var reader=new FileReader();
     reader.onload=function(e){
-      var url=e.target.result;
-      var idx=S.photos.push(url)-1;
-      var thumb=document.createElement("div"); thumb.className="photo-thumb";
-      var img=document.createElement("img"); img.src=url;
-      var del=document.createElement("button"); del.className="del-photo"; del.textContent="×";
-      del.addEventListener("click",(function(i,t){return function(){S.photos.splice(i,1);t.remove();};})(idx,thumb));
-      thumb.appendChild(img); thumb.appendChild(del); preview.appendChild(thumb);
+      compressImage(e.target.result, function(url){
+        var idx=S.photos.push(url)-1;
+        var thumb=document.createElement("div"); thumb.className="photo-thumb";
+        var img=document.createElement("img"); img.src=url;
+        var del=document.createElement("button"); del.className="del-photo"; del.textContent="×";
+        del.addEventListener("click",(function(i,t){return function(){S.photos.splice(i,1);t.remove();};})(idx,thumb));
+        thumb.appendChild(img); thumb.appendChild(del); preview.appendChild(thumb);
+      });
     };
     reader.readAsDataURL(file);
   });
