@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>이서의 사랑싹 텃밭 40번 · 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 <style>
 
 :root{
@@ -478,6 +481,46 @@ body{background:var(--stone);font-family:var(--sans);color:var(--text);min-heigh
 <script>
 
 /* ═══════════ 상태 ═══════════ */
+/* ═══════════ Firebase 설정 ═══════════ */
+// ⬇️ Firebase 콘솔에서 복사한 설정값을 여기에 붙여넣으세요
+var FIREBASE_CONFIG = {
+  apiKey: "여기에-API-KEY",
+  authDomain: "여기에-프로젝트ID.firebaseapp.com",
+  databaseURL: "https://여기에-프로젝트ID-default-rtdb.firebaseio.com",
+  projectId: "여기에-프로젝트ID",
+  storageBucket: "여기에-프로젝트ID.appspot.com",
+  messagingSenderId: "여기에-발신자ID",
+  appId: "여기에-앱ID"
+};
+
+var fbDB=null, fbRef=null, fbReady=false, _fbListening=false;
+try{
+  if(FIREBASE_CONFIG.apiKey.indexOf("여기에")<0){
+    firebase.initializeApp(FIREBASE_CONFIG);
+    fbDB=firebase.database();
+    fbRef=fbDB.ref('iseo-garden-40');
+    fbReady=true;
+  }
+}catch(e){ console.warn('Firebase 초기화 실패, 로컬 모드로 실행합니다.',e); }
+
+function fbSave(){
+  if(!fbReady){
+    localStorage.setItem('gDone',JSON.stringify(Array.from(S.done)));
+    localStorage.setItem('gLogs',JSON.stringify(S.logs));
+    localStorage.setItem('gCustomTasks',JSON.stringify(CUSTOM_TASKS));
+    localStorage.setItem('gCustomActs',JSON.stringify(S.customActs));
+    localStorage.setItem('gCustomStatuses',JSON.stringify(S.customStatuses));
+    return;
+  }
+  fbRef.set({
+    done:Array.from(S.done),
+    logs:S.logs,
+    customTasks:CUSTOM_TASKS,
+    customActs:S.customActs,
+    customStatuses:S.customStatuses
+  });
+}
+
 var S={
   page:'map',
   mapV:'top',
@@ -495,7 +538,7 @@ var S={
 var CN={lettuce:"🥬 상추",chive:"🌱 부추",carrot:"🥕 당근",pea:"🫛 완두콩",reserve:"🌻 예비"};
 var CROP_SHORT={lettuce:"l",chive:"c",carrot:"r",pea:"p",reserve:"v"};
 var CROP_MH={lettuce:30,chive:25,carrot:15,pea:120,reserve:150};
-var CUSTOM_TASKS=JSON.parse(localStorage.getItem("gCustomTasks")||"[]");
+var CUSTOM_TASKS=JSON.parse(localStorage.getItem("gCustomTasks")||"[]"); // Firebase 연결 후 덮어씌워짐
 function TASKS_ALL(){return TASKS.concat(CUSTOM_TASKS).sort(function(a,b){return a.date>b.date?1:-1;});}
 
 /* ═══════════ 도면 데이터 ═══════════ */
@@ -750,7 +793,7 @@ function taskClickHandler(e){
 
 function togTask(id){
   if(S.done.has(id)) S.done.delete(id); else S.done.add(id);
-  localStorage.setItem('gDone',JSON.stringify(Array.from(S.done)));
+  fbSave();
   renderTasks();
 }
 
@@ -766,7 +809,7 @@ function editTask(id){
   var ci=CUSTOM_TASKS.findIndex(function(x){return x.id===id;});
   if(ci>=0){CUSTOM_TASKS[ci]=t;}
   else{var bi=TASKS.findIndex(function(x){return x.id===id;});if(bi>=0) TASKS[bi]=t;}
-  localStorage.setItem("gCustomTasks",JSON.stringify(CUSTOM_TASKS));
+  fbSave();
   renderTasks(); showToast("✅ 수정됐어요!");
 }
 function delTask(id){
@@ -775,8 +818,7 @@ function delTask(id){
   if(ci>=0) CUSTOM_TASKS.splice(ci,1);
   else{var bi=TASKS.findIndex(function(x){return x.id===id;});if(bi>=0) TASKS.splice(bi,1);}
   S.done.delete(id);
-  localStorage.setItem("gCustomTasks",JSON.stringify(CUSTOM_TASKS));
-  localStorage.setItem("gDone",JSON.stringify(Array.from(S.done)));
+  fbSave();
   renderTasks(); showToast("🗑️ 삭제됐어요!");
 }
 function addTask(){
@@ -787,7 +829,7 @@ function addTask(){
   var t={id:"tc"+Date.now(),date:nd,m:nd.slice(5,7),e:"📌",n:nm,d:desc,
          b:"",bt:isBig?"🏠주말":"💧평일",c:"관리",big:isBig};
   CUSTOM_TASKS.push(t);
-  localStorage.setItem("gCustomTasks",JSON.stringify(CUSTOM_TASKS));
+  fbSave();
   renderTasks(); showToast("✅ 추가됐어요!");
 }
 function updStats(){
@@ -913,7 +955,7 @@ function addCustomAct(){
   list.insertBefore(btn, document.getElementById("act-add-btn"));
   if(!S.customActs.includes(v)){
     S.customActs.push(v);
-    localStorage.setItem("gCustomActs",JSON.stringify(S.customActs));
+    fbSave();
   }
   document.getElementById("act-add-row").style.display="none";
   document.getElementById("act-inp").value="";
@@ -933,7 +975,7 @@ function addCustomStatus(cid){
   if(!S.customStatuses[cid]) S.customStatuses[cid]=[];
   if(!S.customStatuses[cid].includes(v)){
     S.customStatuses[cid].push(v);
-    localStorage.setItem("gCustomStatuses",JSON.stringify(S.customStatuses));
+    fbSave();
   }
   var row=document.getElementById("si-"+cid);
   if(row){ row.style.display="none"; inp.value=""; }
@@ -992,7 +1034,7 @@ function saveLog(){
   } else {
     S.logs.unshift(log);
   }
-  localStorage.setItem("gLogs",JSON.stringify(S.logs));
+  fbSave();
   clrJForm(); updJCnt(); showToast("✅ 일지가 저장됐어요!");
 }
 function clrJForm(){
@@ -1159,7 +1201,7 @@ function editLog(id){
 function delLog(id){
   if(!confirm("이 일지를 삭제할까요?")) return;
   S.logs=S.logs.filter(function(l){return l.id!==id;});
-  localStorage.setItem("gLogs",JSON.stringify(S.logs));
+  fbSave();
   updJCnt(); renderLogs(); updGrowth();
   showToast("🗑️ 삭제됐어요");
 }
@@ -1224,11 +1266,7 @@ function importData(){
         if(data.customTasks){CUSTOM_TASKS.length=0;data.customTasks.forEach(function(t){CUSTOM_TASKS.push(t);});}
         if(data.customActs) S.customActs=data.customActs;
         if(data.customStatuses) S.customStatuses=data.customStatuses;
-        localStorage.setItem('gDone',JSON.stringify(Array.from(S.done)));
-        localStorage.setItem('gLogs',JSON.stringify(S.logs));
-        localStorage.setItem('gCustomTasks',JSON.stringify(CUSTOM_TASKS));
-        localStorage.setItem('gCustomActs',JSON.stringify(S.customActs));
-        localStorage.setItem('gCustomStatuses',JSON.stringify(S.customStatuses));
+        fbSave();
         renderTasks(); updJCnt(); updStats();
         var dt=data.exportedAt?data.exportedAt.slice(0,16).replace('T',' '):'알 수 없음';
         showToast('✅ 복원 완료! (백업 시각: '+dt+')');
@@ -1245,34 +1283,61 @@ function showToast(msg){
   setTimeout(function(){t.classList.remove("show");},2300);
 }
 
-/* ═══ 초기화 ═══ */
-window.addEventListener("load",function(){
-  drawMap();
-  renderTasks();
-  updJCnt();
-  updStats();
-  initJournalEvents();
+/* ═══ 커스텀 UI 복원 ═══ */
+function restoreCustomUI(){
   /* 커스텀 활동 복원 */
-  if(S.customActs.length){
-    var list=document.getElementById("act-list");
-    S.customActs.forEach(function(a){
-      var btn=document.createElement("button");
-      btn.className="jb act"; btn.textContent=a;
-      list.insertBefore(btn,document.getElementById("act-add-btn"));
-    });
-  }
+  var list=document.getElementById("act-list");
+  /* 기존 커스텀 버튼 제거 후 재생성 */
+  list.querySelectorAll(".act.custom-act").forEach(function(b){b.remove();});
+  S.customActs.forEach(function(a){
+    var btn=document.createElement("button");
+    btn.className="jb act custom-act"; btn.textContent=a;
+    list.insertBefore(btn,document.getElementById("act-add-btn"));
+  });
   /* 커스텀 상태 복원 */
   Object.keys(S.customStatuses).forEach(function(cid){
     var csl=document.getElementById("csl-"+cid); if(!csl) return;
+    csl.querySelectorAll(".custom-status-item").forEach(function(el){el.remove();});
     S.customStatuses[cid].forEach(function(v){
-      var lbl=document.createElement("label"); lbl.className="csl-item";
+      var lbl=document.createElement("label"); lbl.className="csl-item custom-status-item";
       var cb=document.createElement("input"); cb.type="checkbox"; cb.value=v;
       lbl.appendChild(cb); lbl.appendChild(document.createTextNode(" "+v));
       var addBtn=csl.querySelector("[data-action=add-status]");
       csl.insertBefore(lbl, addBtn);
     });
   });
-  /* 커스텀 태스크 복원 완료 */
+}
+
+/* ═══ 초기화 ═══ */
+window.addEventListener("load",function(){
+  drawMap();
+  initJournalEvents();
+
+  if(fbReady){
+    /* Firebase 실시간 동기화 */
+    fbRef.on('value',function(snapshot){
+      var data=snapshot.val()||{};
+      if(data.done) S.done=new Set(data.done); else S.done=new Set();
+      if(data.logs) S.logs=data.logs; else S.logs=[];
+      if(data.customTasks){CUSTOM_TASKS.length=0;(data.customTasks||[]).forEach(function(t){CUSTOM_TASKS.push(t);});}
+      if(data.customActs) S.customActs=data.customActs; else S.customActs=[];
+      if(data.customStatuses) S.customStatuses=data.customStatuses; else S.customStatuses={};
+      renderTasks();
+      updJCnt();
+      updStats();
+      restoreCustomUI();
+      if(!_fbListening){
+        _fbListening=true;
+        showToast('☁️ Firebase 연결됨 — 실시간 동기화 중!');
+      }
+    });
+  } else {
+    /* 로컬 모드 (Firebase 미설정) */
+    renderTasks();
+    updJCnt();
+    updStats();
+    restoreCustomUI();
+  }
 });
 
 </script>
